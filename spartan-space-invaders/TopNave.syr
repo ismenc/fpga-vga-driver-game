@@ -1,0 +1,495 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: TopNave.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TopNave.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TopNave"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : TopNave
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DivNave.vhd" in Library work.
+Architecture behavioral of Entity divnave is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MovNave.vhd" in Library work.
+Architecture behavioral of Entity movnave is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DIBGenerico.vhd" in Library work.
+Architecture behavioral of Entity dibgenerico is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ipcore_dir/Nave.vhd" in Library work.
+Architecture nave_a of Entity nave is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopNave.vhd" in Library work.
+Entity <topnave> compiled.
+Entity <TopNave> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <TopNave> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <DivNave> in library <work> (architecture <behavioral>) with generics.
+	limite = "000000111111111111111111"
+
+Analyzing hierarchy for entity <MovNave> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <DIBGenerico> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <TopNave> in library <work> (Architecture <Behavioral>).
+WARNING:Xst:2211 - "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopNave.vhd" line 86: Instantiating black box module <Nave>.
+Entity <TopNave> analyzed. Unit <TopNave> generated.
+
+Analyzing generic Entity <DivNave> in library <work> (Architecture <behavioral>).
+	limite = "000000111111111111111111"
+Entity <DivNave> analyzed. Unit <DivNave> generated.
+
+Analyzing Entity <MovNave> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <ejey_nave> in unit <MovNave> has a constant value of 110100000 during circuit operation. The register is replaced by logic.
+Entity <MovNave> analyzed. Unit <MovNave> generated.
+
+Analyzing Entity <DIBGenerico> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <xrel<9>> in unit <DIBGenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <xrel<8>> in unit <DIBGenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <xrel<7>> in unit <DIBGenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <xrel<6>> in unit <DIBGenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <xrel<5>> in unit <DIBGenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <yrel<9>> in unit <DIBGenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <yrel<8>> in unit <DIBGenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <yrel<7>> in unit <DIBGenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <yrel<6>> in unit <DIBGenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <yrel<5>> in unit <DIBGenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <DIBGenerico> analyzed. Unit <DIBGenerico> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <DivNave>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DivNave.vhd".
+    Found 24-bit register for signal <cuenta>.
+    Found 24-bit adder for signal <p_cuenta$addsub0000> created at line 33.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <DivNave> synthesized.
+
+
+Synthesizing Unit <MovNave>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MovNave.vhd".
+    Found 10-bit updown counter for signal <ejex_nave>.
+    Found 10-bit comparator greatequal for signal <ejex_nave$cmp_ge0000> created at line 30.
+    Found 10-bit comparator greater for signal <ejex_nave$cmp_gt0000> created at line 32.
+    Found 10-bit comparator less for signal <ejex_nave$cmp_lt0000> created at line 30.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   3 Comparator(s).
+Unit <MovNave> synthesized.
+
+
+Synthesizing Unit <DIBGenerico>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DIBGenerico.vhd".
+WARNING:Xst:646 - Signal <yrel<9:5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <xrel<9:5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 10-bit adder for signal <DIR_5$add0000> created at line 24.
+    Found 10-bit adder for signal <DIR_5$add0001> created at line 24.
+    Found 10-bit comparator greatequal for signal <DIR_5$cmp_ge0000> created at line 24.
+    Found 10-bit comparator greatequal for signal <DIR_5$cmp_ge0001> created at line 24.
+    Found 10-bit comparator less for signal <DIR_5$cmp_lt0000> created at line 24.
+    Found 10-bit comparator less for signal <DIR_5$cmp_lt0001> created at line 24.
+    Found 10-bit subtractor for signal <xrel>.
+    Found 10-bit subtractor for signal <yrel>.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <DIBGenerico> synthesized.
+
+
+Synthesizing Unit <TopNave>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopNave.vhd".
+Unit <TopNave> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 10-bit adder                                          : 2
+ 10-bit subtractor                                     : 2
+ 24-bit adder                                          : 1
+# Counters                                             : 1
+ 10-bit updown counter                                 : 1
+# Registers                                            : 1
+ 24-bit register                                       : 1
+# Comparators                                          : 7
+ 10-bit comparator greatequal                          : 3
+ 10-bit comparator greater                             : 1
+ 10-bit comparator less                                : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/Nave.ngc>.
+Loading core <Nave> for timing and area information for instance <MemoriaNave>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 10-bit adder                                          : 2
+ 24-bit adder                                          : 1
+ 5-bit subtractor                                      : 2
+# Counters                                             : 1
+ 10-bit updown counter                                 : 1
+# Registers                                            : 24
+ Flip-Flops                                            : 24
+# Comparators                                          : 7
+ 10-bit comparator greatequal                          : 3
+ 10-bit comparator greater                             : 1
+ 10-bit comparator less                                : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:1901 - Instance U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram in unit U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram of type RAMB16_S18_S18 has been replaced by RAMB16
+
+Optimizing unit <TopNave> ...
+
+Optimizing unit <DivNave> ...
+
+Optimizing unit <MovNave> ...
+
+Optimizing unit <DIBGenerico> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TopNave, actual ratio is 4.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 34
+ Flip-Flops                                            : 34
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TopNave.ngr
+Top Level Output File Name         : TopNave
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 48
+
+Cell Usage :
+# BELS                             : 287
+#      GND                         : 3
+#      INV                         : 20
+#      LUT1                        : 29
+#      LUT2                        : 60
+#      LUT2_L                      : 1
+#      LUT3                        : 10
+#      LUT4                        : 30
+#      LUT4_D                      : 1
+#      LUT4_L                      : 1
+#      MUXCY                       : 86
+#      VCC                         : 2
+#      XORCY                       : 44
+# FlipFlops/Latches                : 37
+#      FDC                         : 24
+#      FDCE                        : 7
+#      FDPE                        : 3
+#      FDRE                        : 3
+# RAMS                             : 1
+#      RAMB16                      : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 47
+#      IBUF                        : 24
+#      OBUF                        : 23
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                       83  out of   1920     4%  
+ Number of Slice Flip Flops:             37  out of   3840     0%  
+ Number of 4 input LUTs:                152  out of   3840     3%  
+ Number of IOs:                          48
+ Number of bonded IOBs:                  48  out of    173    27%  
+ Number of BRAMs:                         1  out of     12     8%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                                                                                                                                                                                              | Load  |
+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+clk                                | BUFGP                                                                                                                                                                                                                                              | 38    |
+MemoriaNave/N1                     | NONE(MemoriaNave/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram)| 1     |
+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 34    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.487ns (Maximum Frequency: 117.827MHz)
+   Minimum input arrival time before clock: 8.408ns
+   Maximum output required time after clock: 7.551ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.487ns (frequency: 117.827MHz)
+  Total number of paths / destination ports: 2405 / 54
+-------------------------------------------------------------------------
+Delay:               8.487ns (Levels of Logic = 13)
+  Source:            MovimientoNave/ejex_nave_3 (FF)
+  Destination:       MovimientoNave/ejex_nave_9 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: MovimientoNave/ejex_nave_3 to MovimientoNave/ejex_nave_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             8   0.720   1.422  MovimientoNave/ejex_nave_3 (MovimientoNave/ejex_nave_3)
+     LUT4:I0->O            5   0.551   0.947  MovimientoNave/ejex_nave_cmp_lt0000237 (MovimientoNave/ejex_nave_cmp_lt0000237)
+     LUT4_D:I3->O          7   0.551   1.261  MovimientoNave/ejex_nave_cmp_lt0000239 (MovimientoNave/ejex_nave_cmp_lt0000)
+     LUT2:I1->O            1   0.551   0.801  MovimientoNave/ejex_nave_not0003_inv2 (MovimientoNave/ejex_nave_not0003_inv)
+     MUXCY:CI->O           1   0.064   0.000  MovimientoNave/Mcount_ejex_nave_cy<0> (MovimientoNave/Mcount_ejex_nave_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  MovimientoNave/Mcount_ejex_nave_cy<1> (MovimientoNave/Mcount_ejex_nave_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  MovimientoNave/Mcount_ejex_nave_cy<2> (MovimientoNave/Mcount_ejex_nave_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  MovimientoNave/Mcount_ejex_nave_cy<3> (MovimientoNave/Mcount_ejex_nave_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  MovimientoNave/Mcount_ejex_nave_cy<4> (MovimientoNave/Mcount_ejex_nave_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  MovimientoNave/Mcount_ejex_nave_cy<5> (MovimientoNave/Mcount_ejex_nave_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  MovimientoNave/Mcount_ejex_nave_cy<6> (MovimientoNave/Mcount_ejex_nave_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  MovimientoNave/Mcount_ejex_nave_cy<7> (MovimientoNave/Mcount_ejex_nave_cy<7>)
+     MUXCY:CI->O           0   0.064   0.000  MovimientoNave/Mcount_ejex_nave_cy<8> (MovimientoNave/Mcount_ejex_nave_cy<8>)
+     XORCY:CI->O           1   0.904   0.000  MovimientoNave/Mcount_ejex_nave_xor<9> (MovimientoNave/Result<9>)
+     FDCE:D                    0.203          MovimientoNave/ejex_nave_9
+    ----------------------------------------
+    Total                      8.487ns (4.056ns logic, 4.431ns route)
+                                       (47.8% logic, 52.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 915 / 30
+-------------------------------------------------------------------------
+Offset:              8.408ns (Levels of Logic = 10)
+  Source:            pos_y<0> (PAD)
+  Destination:       MemoriaNave/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram (RAM)
+  Destination Clock: clk rising
+
+  Data Path: pos_y<0> to MemoriaNave/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.821   0.907  pos_y_0_IBUF (pos_y_0_IBUF)
+     INV:I->O              1   0.551   0.000  DibujaNave/Msub_yrel_Madd_lut<0>1_INV_0 (DibujaNave/Msub_yrel_Madd_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  DibujaNave/Msub_yrel_Madd_cy<0> (DibujaNave/Msub_yrel_Madd_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  DibujaNave/Msub_yrel_Madd_cy<1> (DibujaNave/Msub_yrel_Madd_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  DibujaNave/Msub_yrel_Madd_cy<2> (DibujaNave/Msub_yrel_Madd_cy<2>)
+     MUXCY:CI->O           0   0.064   0.000  DibujaNave/Msub_yrel_Madd_cy<3> (DibujaNave/Msub_yrel_Madd_cy<3>)
+     XORCY:CI->O           1   0.904   1.140  DibujaNave/Msub_yrel_Madd_xor<4> (DibujaNave/yrel<4>)
+     LUT2:I0->O            1   0.551   1.140  DibujaNave/DIR_0_mux00001_SW1 (N10)
+     LUT4:I0->O            1   0.551   0.801  DibujaNave/DIR_9_mux00001 (DIRS<9>)
+     begin scope: 'MemoriaNave'
+     begin scope: 'U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram'
+     RAMB16:ADDRA13            0.350          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram
+    ----------------------------------------
+    Total                      8.408ns (4.420ns logic, 3.988ns route)
+                                       (52.6% logic, 47.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 13 / 13
+-------------------------------------------------------------------------
+Offset:              7.551ns (Levels of Logic = 1)
+  Source:            MovimientoNave/ejex_nave_5 (FF)
+  Destination:       x_nave<5> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: MovimientoNave/ejex_nave_5 to x_nave<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q            14   0.720   1.187  MovimientoNave/ejex_nave_5 (MovimientoNave/ejex_nave_5)
+     OBUF:I->O                 5.644          x_nave_5_OBUF (x_nave<5>)
+    ----------------------------------------
+    Total                      7.551ns (6.364ns logic, 1.187ns route)
+                                       (84.3% logic, 15.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.96 secs
+ 
+--> 
+
+Total memory usage is 259168 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
+

@@ -1,0 +1,394 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: mov_nave.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mov_nave.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mov_nave"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : mov_nave
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MovNave.vhd" in Library work.
+Entity <mov_nave> compiled.
+Entity <mov_nave> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <mov_nave> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <mov_nave> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <ejey_nave> in unit <mov_nave> has a constant value of 110100000 during circuit operation. The register is replaced by logic.
+Entity <mov_nave> analyzed. Unit <mov_nave> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <mov_nave>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MovNave.vhd".
+    Found 10-bit updown counter for signal <ejex_nave>.
+    Found 10-bit comparator greatequal for signal <ejex_nave$cmp_ge0000> created at line 30.
+    Found 10-bit comparator greater for signal <ejex_nave$cmp_gt0000> created at line 32.
+    Found 10-bit comparator less for signal <ejex_nave$cmp_lt0000> created at line 30.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   3 Comparator(s).
+Unit <mov_nave> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 10-bit updown counter                                 : 1
+# Comparators                                          : 3
+ 10-bit comparator greatequal                          : 1
+ 10-bit comparator greater                             : 1
+ 10-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 10-bit updown counter                                 : 1
+# Comparators                                          : 3
+ 10-bit comparator greatequal                          : 1
+ 10-bit comparator greater                             : 1
+ 10-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <mov_nave> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block mov_nave, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 10
+ Flip-Flops                                            : 10
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : mov_nave.ngr
+Top Level Output File Name         : mov_nave
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 25
+
+Cell Usage :
+# BELS                             : 50
+#      GND                         : 1
+#      LUT2                        : 8
+#      LUT2_L                      : 1
+#      LUT3                        : 7
+#      LUT4                        : 11
+#      LUT4_D                      : 1
+#      LUT4_L                      : 1
+#      MUXCY                       : 9
+#      VCC                         : 1
+#      XORCY                       : 10
+# FlipFlops/Latches                : 10
+#      FDCE                        : 7
+#      FDPE                        : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 24
+#      IBUF                        : 4
+#      OBUF                        : 20
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                       15  out of   1920     0%  
+ Number of Slice Flip Flops:             10  out of   3840     0%  
+ Number of 4 input LUTs:                 29  out of   3840     0%  
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of    173    14%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 10    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 10    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.363ns (Maximum Frequency: 119.574MHz)
+   Minimum input arrival time before clock: 6.406ns
+   Maximum output required time after clock: 7.447ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.363ns (frequency: 119.574MHz)
+  Total number of paths / destination ports: 974 / 20
+-------------------------------------------------------------------------
+Delay:               8.363ns (Levels of Logic = 13)
+  Source:            ejex_nave_9 (FF)
+  Destination:       ejex_nave_9 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: ejex_nave_9 to ejex_nave_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.720   1.256  ejex_nave_9 (ejex_nave_9)
+     LUT4:I0->O            5   0.551   0.989  ejex_nave_cmp_lt0000212 (ejex_nave_cmp_lt0000212)
+     LUT4_D:I2->O          7   0.551   1.261  ejex_nave_cmp_lt0000239 (ejex_nave_cmp_lt0000)
+     LUT2:I1->O            1   0.551   0.801  ejex_nave_not0003_inv2 (ejex_nave_not0003_inv)
+     MUXCY:CI->O           1   0.064   0.000  Mcount_ejex_nave_cy<0> (Mcount_ejex_nave_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  Mcount_ejex_nave_cy<1> (Mcount_ejex_nave_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  Mcount_ejex_nave_cy<2> (Mcount_ejex_nave_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  Mcount_ejex_nave_cy<3> (Mcount_ejex_nave_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Mcount_ejex_nave_cy<4> (Mcount_ejex_nave_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Mcount_ejex_nave_cy<5> (Mcount_ejex_nave_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Mcount_ejex_nave_cy<6> (Mcount_ejex_nave_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Mcount_ejex_nave_cy<7> (Mcount_ejex_nave_cy<7>)
+     MUXCY:CI->O           0   0.064   0.000  Mcount_ejex_nave_cy<8> (Mcount_ejex_nave_cy<8>)
+     XORCY:CI->O           1   0.904   0.000  Mcount_ejex_nave_xor<9> (Result<9>)
+     FDCE:D                    0.203          ejex_nave_9
+    ----------------------------------------
+    Total                      8.363ns (4.056ns logic, 4.307ns route)
+                                       (48.5% logic, 51.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 125 / 20
+-------------------------------------------------------------------------
+Offset:              6.406ns (Levels of Logic = 12)
+  Source:            left (PAD)
+  Destination:       ejex_nave_9 (FF)
+  Destination Clock: clk rising
+
+  Data Path: left to ejex_nave_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   0.821   1.432  left_IBUF (left_IBUF)
+     LUT2:I1->O            1   0.551   0.996  ejex_nave_cmp_lt0000239_SW0 (N3)
+     LUT4:I1->O            1   0.551   0.000  Mcount_ejex_nave_lut<1> (Mcount_ejex_nave_lut<1>)
+     MUXCY:S->O            1   0.500   0.000  Mcount_ejex_nave_cy<1> (Mcount_ejex_nave_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  Mcount_ejex_nave_cy<2> (Mcount_ejex_nave_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  Mcount_ejex_nave_cy<3> (Mcount_ejex_nave_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Mcount_ejex_nave_cy<4> (Mcount_ejex_nave_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Mcount_ejex_nave_cy<5> (Mcount_ejex_nave_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Mcount_ejex_nave_cy<6> (Mcount_ejex_nave_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Mcount_ejex_nave_cy<7> (Mcount_ejex_nave_cy<7>)
+     MUXCY:CI->O           0   0.064   0.000  Mcount_ejex_nave_cy<8> (Mcount_ejex_nave_cy<8>)
+     XORCY:CI->O           1   0.904   0.000  Mcount_ejex_nave_xor<9> (Result<9>)
+     FDCE:D                    0.203          ejex_nave_9
+    ----------------------------------------
+    Total                      6.406ns (3.978ns logic, 2.428ns route)
+                                       (62.1% logic, 37.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              7.447ns (Levels of Logic = 1)
+  Source:            ejex_nave_5 (FF)
+  Destination:       x_nave<5> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: ejex_nave_5 to x_nave<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             8   0.720   1.083  ejex_nave_5 (ejex_nave_5)
+     OBUF:I->O                 5.644          x_nave_5_OBUF (x_nave<5>)
+    ----------------------------------------
+    Total                      7.447ns (6.364ns logic, 1.083ns route)
+                                       (85.5% logic, 14.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.11 secs
+ 
+--> 
+
+Total memory usage is 254816 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

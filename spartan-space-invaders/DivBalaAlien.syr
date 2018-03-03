@@ -1,0 +1,371 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: DivBalaAlien.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "DivBalaAlien.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "DivBalaAlien"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : DivBalaAlien
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DivBalaAlien.vhd" in Library work.
+Entity <DivBalaAlien> compiled.
+Entity <DivBalaAlien> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <DivBalaAlien> in library <work> (architecture <Behavioral>) with generics.
+	limite = "111111111111111111"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <DivBalaAlien> in library <work> (Architecture <Behavioral>).
+	limite = "111111111111111111"
+Entity <DivBalaAlien> analyzed. Unit <DivBalaAlien> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <DivBalaAlien>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DivBalaAlien.vhd".
+    Found 18-bit register for signal <cuenta>.
+    Found 18-bit adder for signal <p_cuenta$addsub0000> created at line 33.
+    Summary:
+	inferred  18 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <DivBalaAlien> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 18-bit adder                                          : 1
+# Registers                                            : 1
+ 18-bit register                                       : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 18-bit adder                                          : 1
+# Registers                                            : 18
+ Flip-Flops                                            : 18
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <DivBalaAlien> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block DivBalaAlien, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 18
+ Flip-Flops                                            : 18
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : DivBalaAlien.ngr
+Top Level Output File Name         : DivBalaAlien
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 3
+
+Cell Usage :
+# BELS                             : 83
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 17
+#      LUT2                        : 19
+#      LUT4                        : 4
+#      MUXCY                       : 22
+#      VCC                         : 1
+#      XORCY                       : 18
+# FlipFlops/Latches                : 18
+#      FDC                         : 18
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 2
+#      IBUF                        : 1
+#      OBUF                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                       22  out of   1920     1%  
+ Number of Slice Flip Flops:             18  out of   3840     0%  
+ Number of 4 input LUTs:                 41  out of   3840     1%  
+ Number of IOs:                           3
+ Number of bonded IOBs:                   3  out of    173     1%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 18    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 18    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.601ns (Maximum Frequency: 151.492MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 10.576ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.601ns (frequency: 151.492MHz)
+  Total number of paths / destination ports: 495 / 18
+-------------------------------------------------------------------------
+Delay:               6.601ns (Levels of Logic = 19)
+  Source:            cuenta_1 (FF)
+  Destination:       cuenta_17 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: cuenta_1 to cuenta_17
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.720   1.216  cuenta_1 (cuenta_1)
+     LUT1:I0->O            1   0.551   0.000  Madd_p_cuenta_addsub0000_cy<1>_rt (Madd_p_cuenta_addsub0000_cy<1>_rt)
+     MUXCY:S->O            1   0.500   0.000  Madd_p_cuenta_addsub0000_cy<1> (Madd_p_cuenta_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_p_cuenta_addsub0000_cy<2> (Madd_p_cuenta_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_p_cuenta_addsub0000_cy<3> (Madd_p_cuenta_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_p_cuenta_addsub0000_cy<4> (Madd_p_cuenta_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_p_cuenta_addsub0000_cy<5> (Madd_p_cuenta_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_p_cuenta_addsub0000_cy<6> (Madd_p_cuenta_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_p_cuenta_addsub0000_cy<7> (Madd_p_cuenta_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_p_cuenta_addsub0000_cy<8> (Madd_p_cuenta_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_p_cuenta_addsub0000_cy<9> (Madd_p_cuenta_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_p_cuenta_addsub0000_cy<10> (Madd_p_cuenta_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_p_cuenta_addsub0000_cy<11> (Madd_p_cuenta_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_p_cuenta_addsub0000_cy<12> (Madd_p_cuenta_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_p_cuenta_addsub0000_cy<13> (Madd_p_cuenta_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_p_cuenta_addsub0000_cy<14> (Madd_p_cuenta_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_p_cuenta_addsub0000_cy<15> (Madd_p_cuenta_addsub0000_cy<15>)
+     MUXCY:CI->O           0   0.064   0.000  Madd_p_cuenta_addsub0000_cy<16> (Madd_p_cuenta_addsub0000_cy<16>)
+     XORCY:CI->O           1   0.904   0.996  Madd_p_cuenta_addsub0000_xor<17> (p_cuenta_addsub0000<17>)
+     LUT2:I1->O            1   0.551   0.000  p_cuenta<17>1 (p_cuenta<17>)
+     FDC:D                     0.203          cuenta_17
+    ----------------------------------------
+    Total                      6.601ns (4.389ns logic, 2.212ns route)
+                                       (66.5% logic, 33.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 18 / 1
+-------------------------------------------------------------------------
+Offset:              10.576ns (Levels of Logic = 7)
+  Source:            cuenta_4 (FF)
+  Destination:       vel (PAD)
+  Source Clock:      clk rising
+
+  Data Path: cuenta_4 to vel
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.720   1.216  cuenta_4 (cuenta_4)
+     LUT2:I0->O            1   0.551   0.000  vel_cmp_eq0000_wg_lut<0> (vel_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  vel_cmp_eq0000_wg_cy<0> (vel_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  vel_cmp_eq0000_wg_cy<1> (vel_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  vel_cmp_eq0000_wg_cy<2> (vel_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  vel_cmp_eq0000_wg_cy<3> (vel_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O          19   0.303   1.450  vel_cmp_eq0000_wg_cy<4> (vel_OBUF)
+     OBUF:I->O                 5.644          vel_OBUF (vel)
+    ----------------------------------------
+    Total                     10.576ns (7.910ns logic, 2.666ns route)
+                                       (74.8% logic, 25.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.89 secs
+ 
+--> 
+
+Total memory usage is 254048 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,408 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: MovAlien.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "MovAlien.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "MovAlien"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : MovAlien
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MovAlien.vhd" in Library work.
+Entity <movalien> compiled.
+Entity <movalien> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <MovAlien> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <MovAlien> in library <work> (Architecture <behavioral>).
+Entity <MovAlien> analyzed. Unit <MovAlien> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <MovAlien>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MovAlien.vhd".
+    Found 1-bit register for signal <q>.
+    Found 10-bit register for signal <xdib>.
+    Found 10-bit comparator greatequal for signal <xdib$cmp_ge0000> created at line 31.
+    Found 10-bit comparator lessequal for signal <xdib$cmp_le0000> created at line 34.
+    Found 10-bit addsub for signal <xdib$mux0003>.
+    Found 9-bit up accumulator for signal <ydib>.
+    Found 10-bit comparator greater for signal <ydib$cmp_gt0000> created at line 34.
+    Found 10-bit comparator less for signal <ydib$cmp_lt0000> created at line 31.
+    Summary:
+	inferred   1 Accumulator(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <MovAlien> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 10-bit addsub                                         : 1
+# Accumulators                                         : 1
+ 9-bit up accumulator                                  : 1
+# Registers                                            : 2
+ 1-bit register                                        : 1
+ 10-bit register                                       : 1
+# Comparators                                          : 4
+ 10-bit comparator greatequal                          : 1
+ 10-bit comparator greater                             : 1
+ 10-bit comparator less                                : 1
+ 10-bit comparator lessequal                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 10-bit addsub                                         : 1
+# Accumulators                                         : 1
+ 9-bit up accumulator                                  : 1
+# Registers                                            : 11
+ Flip-Flops                                            : 11
+# Comparators                                          : 4
+ 10-bit comparator greatequal                          : 1
+ 10-bit comparator greater                             : 1
+ 10-bit comparator less                                : 1
+ 10-bit comparator lessequal                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <ydib_1> has a constant value of 0 in block <MovAlien>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ydib_2> has a constant value of 0 in block <MovAlien>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ydib_3> has a constant value of 0 in block <MovAlien>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ydib_4> has a constant value of 0 in block <MovAlien>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <MovAlien> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block MovAlien, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 16
+ Flip-Flops                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : MovAlien.ngr
+Top Level Output File Name         : MovAlien
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 23
+
+Cell Usage :
+# BELS                             : 45
+#      GND                         : 1
+#      INV                         : 2
+#      LUT2                        : 2
+#      LUT2_L                      : 2
+#      LUT3                        : 3
+#      LUT4                        : 14
+#      LUT4_D                      : 2
+#      MUXCY                       : 9
+#      XORCY                       : 10
+# FlipFlops/Latches                : 16
+#      FDCE                        : 12
+#      FDPE                        : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 22
+#      IBUF                        : 2
+#      OBUF                        : 20
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                       14  out of   1920     0%  
+ Number of Slice Flip Flops:             16  out of   3840     0%  
+ Number of 4 input LUTs:                 25  out of   3840     0%  
+ Number of IOs:                          23
+ Number of bonded IOBs:                  23  out of    173    13%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 16    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 16    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.709ns (Maximum Frequency: 114.824MHz)
+   Minimum input arrival time before clock: 4.460ns
+   Maximum output required time after clock: 7.285ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.709ns (frequency: 114.824MHz)
+  Total number of paths / destination ports: 1392 / 22
+-------------------------------------------------------------------------
+Delay:               8.709ns (Levels of Logic = 14)
+  Source:            xdib_6 (FF)
+  Destination:       xdib_9 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: xdib_6 to xdib_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.720   1.256  xdib_6 (xdib_6)
+     LUT2_L:I0->LO         1   0.551   0.126  ydib_cmp_lt00001_SW0 (N0)
+     LUT4:I3->O           11   0.551   1.339  ydib_cmp_lt00001 (ydib_cmp_lt0000)
+     LUT3:I1->O            2   0.551   0.945  xdib_mux00052 (xdib_mux0005)
+     LUT3:I2->O            1   0.551   0.000  Maddsub_xdib_mux0003_lut<0> (Maddsub_xdib_mux0003_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  Maddsub_xdib_mux0003_cy<0> (Maddsub_xdib_mux0003_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_xdib_mux0003_cy<1> (Maddsub_xdib_mux0003_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_xdib_mux0003_cy<2> (Maddsub_xdib_mux0003_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_xdib_mux0003_cy<3> (Maddsub_xdib_mux0003_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_xdib_mux0003_cy<4> (Maddsub_xdib_mux0003_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_xdib_mux0003_cy<5> (Maddsub_xdib_mux0003_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_xdib_mux0003_cy<6> (Maddsub_xdib_mux0003_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_xdib_mux0003_cy<7> (Maddsub_xdib_mux0003_cy<7>)
+     MUXCY:CI->O           0   0.064   0.000  Maddsub_xdib_mux0003_cy<8> (Maddsub_xdib_mux0003_cy<8>)
+     XORCY:CI->O           1   0.904   0.000  Maddsub_xdib_mux0003_xor<9> (xdib_mux0003<9>)
+     FDCE:D                    0.203          xdib_9
+    ----------------------------------------
+    Total                      8.709ns (5.043ns logic, 3.666ns route)
+                                       (57.9% logic, 42.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              4.460ns (Levels of Logic = 2)
+  Source:            vel (PAD)
+  Destination:       q (FF)
+  Destination Clock: clk rising
+
+  Data Path: vel to q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            11   0.821   1.483  vel_IBUF (vel_IBUF)
+     LUT2:I0->O            6   0.551   1.003  ydib_not00011 (ydib_not0001)
+     FDCE:CE                   0.602          q
+    ----------------------------------------
+    Total                      4.460ns (1.974ns logic, 2.486ns route)
+                                       (44.3% logic, 55.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 15 / 15
+-------------------------------------------------------------------------
+Offset:              7.285ns (Levels of Logic = 1)
+  Source:            ydib_5 (FF)
+  Destination:       y_alien<5> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: ydib_5 to y_alien<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             5   0.720   0.921  ydib_5 (ydib_5)
+     OBUF:I->O                 5.644          y_alien_5_OBUF (y_alien<5>)
+    ----------------------------------------
+    Total                      7.285ns (6.364ns logic, 0.921ns route)
+                                       (87.4% logic, 12.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.77 secs
+ 
+--> 
+
+Total memory usage is 255648 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

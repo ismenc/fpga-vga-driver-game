@@ -1,0 +1,8 @@
+vhdl work "ipcore_dir/Corazon.vhd"
+vhdl work "ipcore_dir/FaltaCorazon.vhd"
+vhdl work "Impact.vhd"
+vhdl work "DivVidas.vhd"
+vhdl work "DIBGenerico.vhd"
+vhdl work "ContVidas.vhd"
+vhdl work "BlinkVidas.vhd"
+vhdl work "TopVidas.vhd"

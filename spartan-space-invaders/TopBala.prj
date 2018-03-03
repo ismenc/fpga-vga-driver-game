@@ -1,0 +1,5 @@
+vhdl work "ipcore_dir/Bala.vhd"
+vhdl work "MovBala.vhd"
+vhdl work "DivBala.vhd"
+vhdl work "DIBGenerico.vhd"
+vhdl work "TopBala.vhd"

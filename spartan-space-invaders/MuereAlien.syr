@@ -1,0 +1,405 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: MuereAlien.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "MuereAlien.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "MuereAlien"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : MuereAlien
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MuereAlien.vhd" in Library work.
+Entity <muerealien> compiled.
+Entity <muerealien> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <MuereAlien> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <MuereAlien> in library <work> (Architecture <behavioral>).
+Entity <MuereAlien> analyzed. Unit <MuereAlien> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <MuereAlien>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MuereAlien.vhd".
+    Register <rst> equivalent to <cl> has been removed
+    Found 1-bit register for signal <muerto>.
+    Found 1-bit register for signal <cl>.
+    Found 10-bit adder for signal <muere$add0000> created at line 34.
+    Found 10-bit adder for signal <muere$add0001> created at line 34.
+    Found 10-bit comparator greater for signal <muere$cmp_gt0000> created at line 34.
+    Found 10-bit comparator greater for signal <muere$cmp_gt0001> created at line 34.
+    Found 10-bit comparator less for signal <muere$cmp_lt0000> created at line 34.
+    Found 10-bit comparator less for signal <muere$cmp_lt0001> created at line 34.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <MuereAlien> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 10-bit adder                                          : 2
+# Registers                                            : 2
+ 1-bit register                                        : 2
+# Comparators                                          : 4
+ 10-bit comparator greater                             : 2
+ 10-bit comparator less                                : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 10-bit adder                                          : 2
+# Registers                                            : 2
+ Flip-Flops                                            : 2
+# Comparators                                          : 4
+ 10-bit comparator greater                             : 2
+ 10-bit comparator less                                : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <MuereAlien> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block MuereAlien, actual ratio is 1.
+FlipFlop muerto has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 3
+ Flip-Flops                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : MuereAlien.ngr
+Top Level Output File Name         : MuereAlien
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 46
+
+Cell Usage :
+# BELS                             : 84
+#      LUT2                        : 32
+#      LUT3                        : 6
+#      LUT4                        : 5
+#      MUXCY                       : 40
+#      VCC                         : 1
+# FlipFlops/Latches                : 3
+#      FDCE                        : 2
+#      FDP                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 45
+#      IBUF                        : 41
+#      OBUF                        : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                       22  out of   1920     1%  
+ Number of Slice Flip Flops:              2  out of   3840     0%  
+ Number of 4 input LUTs:                 43  out of   3840     1%  
+ Number of IOs:                          46
+ Number of bonded IOBs:                  46  out of    173    26%  
+    IOB Flip Flops:                       1
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 3     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 3     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 1.724ns (Maximum Frequency: 580.046MHz)
+   Minimum input arrival time before clock: 7.846ns
+   Maximum output required time after clock: 7.241ns
+   Maximum combinational path delay: 12.888ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 1.724ns (frequency: 580.046MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.724ns (Levels of Logic = 0)
+  Source:            muerto (FF)
+  Destination:       cl (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: muerto to cl
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.720   0.801  muerto (muerto_OBUF)
+     FDP:D                     0.203          cl
+    ----------------------------------------
+    Total                      1.724ns (0.923ns logic, 0.801ns route)
+                                       (53.5% logic, 46.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 280 / 2
+-------------------------------------------------------------------------
+Offset:              7.846ns (Levels of Logic = 6)
+  Source:            x_alien<7> (PAD)
+  Destination:       muerto (FF)
+  Destination Clock: clk rising
+
+  Data Path: x_alien<7> to muerto
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.821   1.246  x_alien_7_IBUF (Madd_muere_add0000_lut<7>)
+     LUT3:I0->O            2   0.551   0.945  Madd_muere_add0000_cy<7>11 (Madd_muere_add0000_cy<7>)
+     LUT3:I2->O            1   0.551   0.000  Mcompar_muere_cmp_lt0000_lut<8> (Mcompar_muere_cmp_lt0000_lut<8>)
+     MUXCY:S->O            1   0.500   0.000  Mcompar_muere_cmp_lt0000_cy<8> (Mcompar_muere_cmp_lt0000_cy<8>)
+     MUXCY:CI->O           1   0.303   0.869  Mcompar_muere_cmp_lt0000_cy<9> (Mcompar_muere_cmp_lt0000_cy<9>)
+     LUT4:I2->O            3   0.551   0.907  muere_and00001 (rst_bala_OBUF)
+     FDCE:CE                   0.602          muerto
+    ----------------------------------------
+    Total                      7.846ns (3.879ns logic, 3.967ns route)
+                                       (49.4% logic, 50.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              7.241ns (Levels of Logic = 1)
+  Source:            cl (FF)
+  Destination:       cl (PAD)
+  Source Clock:      clk rising
+
+  Data Path: cl to cl
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              2   0.720   0.877  cl (rst_OBUF)
+     OBUF:I->O                 5.644          cl_OBUF (cl)
+    ----------------------------------------
+    Total                      7.241ns (6.364ns logic, 0.877ns route)
+                                       (87.9% logic, 12.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 140 / 1
+-------------------------------------------------------------------------
+Delay:               12.888ns (Levels of Logic = 7)
+  Source:            x_alien<7> (PAD)
+  Destination:       rst_bala (PAD)
+
+  Data Path: x_alien<7> to rst_bala
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.821   1.246  x_alien_7_IBUF (Madd_muere_add0000_lut<7>)
+     LUT3:I0->O            2   0.551   0.945  Madd_muere_add0000_cy<7>11 (Madd_muere_add0000_cy<7>)
+     LUT3:I2->O            1   0.551   0.000  Mcompar_muere_cmp_lt0000_lut<8> (Mcompar_muere_cmp_lt0000_lut<8>)
+     MUXCY:S->O            1   0.500   0.000  Mcompar_muere_cmp_lt0000_cy<8> (Mcompar_muere_cmp_lt0000_cy<8>)
+     MUXCY:CI->O           1   0.303   0.869  Mcompar_muere_cmp_lt0000_cy<9> (Mcompar_muere_cmp_lt0000_cy<9>)
+     LUT4:I2->O            3   0.551   0.907  muere_and00001 (rst_bala_OBUF)
+     OBUF:I->O                 5.644          rst_bala_OBUF (rst_bala)
+    ----------------------------------------
+    Total                     12.888ns (8.921ns logic, 3.967ns route)
+                                       (69.2% logic, 30.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.68 secs
+ 
+--> 
+
+Total memory usage is 254880 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

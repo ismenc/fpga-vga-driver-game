@@ -1,0 +1,424 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: MovBalaAlien.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "MovBalaAlien.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "MovBalaAlien"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : MovBalaAlien
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MovBalaAlien.vhd" in Library work.
+Architecture behavioral of Entity movbalaalien is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <MovBalaAlien> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <MovBalaAlien> in library <work> (Architecture <behavioral>).
+Entity <MovBalaAlien> analyzed. Unit <MovBalaAlien> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <MovBalaAlien>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MovBalaAlien.vhd".
+    Found 10-bit register for signal <x_bala_alien>.
+    Found 10-bit register for signal <y_bala_alien>.
+    Found 1-bit register for signal <act>.
+    Found 1-bit register for signal <q>.
+    Found 10-bit comparator greatequal for signal <y_bala_alien$cmp_ge0000> created at line 39.
+    Found 10-bit comparator less for signal <y_bala_alien$cmp_lt0000> created at line 41.
+    Found 10-bit register for signal <ydib>.
+    Found 10-bit adder for signal <ydib$addsub0000> created at line 40.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <MovBalaAlien> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 10-bit adder                                          : 1
+# Registers                                            : 5
+ 1-bit register                                        : 2
+ 10-bit register                                       : 3
+# Comparators                                          : 2
+ 10-bit comparator greatequal                          : 1
+ 10-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 10-bit adder                                          : 1
+# Registers                                            : 12
+ Flip-Flops                                            : 12
+# Comparators                                          : 2
+ 10-bit comparator greatequal                          : 1
+ 10-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <MovBalaAlien> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block MovBalaAlien, actual ratio is 2.
+FlipFlop q has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 34
+ Flip-Flops                                            : 34
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : MovBalaAlien.ngr
+Top Level Output File Name         : MovBalaAlien
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 43
+
+Cell Usage :
+# BELS                             : 98
+#      LUT2                        : 42
+#      LUT2_L                      : 5
+#      LUT3                        : 5
+#      LUT3_D                      : 1
+#      LUT3_L                      : 2
+#      LUT4                        : 34
+#      LUT4_D                      : 2
+#      MUXF5                       : 7
+# FlipFlops/Latches                : 34
+#      FDCE                        : 3
+#      FDCPE                       : 20
+#      FDE                         : 11
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 42
+#      IBUF                        : 22
+#      OBUF                        : 20
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                       51  out of   1920     2%  
+ Number of Slice Flip Flops:             34  out of   3840     0%  
+ Number of 4 input LUTs:                 91  out of   3840     2%  
+ Number of IOs:                          43
+ Number of bonded IOBs:                  43  out of    173    24%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 34    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------+------------------------+-------+
+Control Signal                                     | Buffer(FF name)        | Load  |
+---------------------------------------------------+------------------------+-------+
+reset                                              | IBUF                   | 3     |
+x_bala_alien_0__and0000(x_bala_alien_0__and00001:O)| NONE(x_bala_alien_0)   | 1     |
+x_bala_alien_0__and0001(x_bala_alien_0__and00011:O)| NONE(x_bala_alien_0)   | 1     |
+x_bala_alien_1__and0000(x_bala_alien_1__and00001:O)| NONE(x_bala_alien_1)   | 1     |
+x_bala_alien_1__and0001(x_bala_alien_1__and00011:O)| NONE(x_bala_alien_1)   | 1     |
+x_bala_alien_2__and0000(x_bala_alien_2__and00001:O)| NONE(x_bala_alien_2)   | 1     |
+x_bala_alien_2__and0001(x_bala_alien_2__and00011:O)| NONE(x_bala_alien_2)   | 1     |
+x_bala_alien_3__and0000(x_bala_alien_3__and00001:O)| NONE(x_bala_alien_3)   | 1     |
+x_bala_alien_3__and0001(x_bala_alien_3__and00011:O)| NONE(x_bala_alien_3)   | 1     |
+x_bala_alien_4__and0000(x_bala_alien_4__and00001:O)| NONE(x_bala_alien_4)   | 1     |
+x_bala_alien_4__and0001(x_bala_alien_4__and00011:O)| NONE(x_bala_alien_4)   | 1     |
+x_bala_alien_5__and0000(x_bala_alien_5__and00001:O)| NONE(x_bala_alien_5)   | 1     |
+x_bala_alien_5__and0001(x_bala_alien_5__and00011:O)| NONE(x_bala_alien_5)   | 1     |
+x_bala_alien_6__and0000(x_bala_alien_6__and00001:O)| NONE(x_bala_alien_6)   | 1     |
+x_bala_alien_6__and0001(x_bala_alien_6__and00011:O)| NONE(x_bala_alien_6)   | 1     |
+x_bala_alien_7__and0000(x_bala_alien_7__and00001:O)| NONE(x_bala_alien_7)   | 1     |
+x_bala_alien_7__and0001(x_bala_alien_7__and00011:O)| NONE(x_bala_alien_7)   | 1     |
+x_bala_alien_8__and0000(x_bala_alien_8__and00001:O)| NONE(x_bala_alien_8)   | 1     |
+x_bala_alien_8__and0001(x_bala_alien_8__and00011:O)| NONE(x_bala_alien_8)   | 1     |
+x_bala_alien_9__and0000(x_bala_alien_9__and00001:O)| NONE(x_bala_alien_9)   | 1     |
+x_bala_alien_9__and0001(x_bala_alien_9__and00011:O)| NONE(x_bala_alien_9)   | 1     |
+y_bala_alien_0__and0000(y_bala_alien_0__and00001:O)| NONE(y_bala_alien_0)   | 1     |
+y_bala_alien_0__and0001(y_bala_alien_0__and00011:O)| NONE(y_bala_alien_0)   | 1     |
+y_bala_alien_1__and0000(y_bala_alien_1__and00001:O)| NONE(y_bala_alien_1)   | 1     |
+y_bala_alien_1__and0001(y_bala_alien_1__and00011:O)| NONE(y_bala_alien_1)   | 1     |
+y_bala_alien_2__and0000(y_bala_alien_2__and00001:O)| NONE(y_bala_alien_2)   | 1     |
+y_bala_alien_2__and0001(y_bala_alien_2__and00011:O)| NONE(y_bala_alien_2)   | 1     |
+y_bala_alien_3__and0000(y_bala_alien_3__and00001:O)| NONE(y_bala_alien_3)   | 1     |
+y_bala_alien_3__and0001(y_bala_alien_3__and00011:O)| NONE(y_bala_alien_3)   | 1     |
+y_bala_alien_4__and0000(y_bala_alien_4__and00001:O)| NONE(y_bala_alien_4)   | 1     |
+y_bala_alien_4__and0001(y_bala_alien_4__and00011:O)| NONE(y_bala_alien_4)   | 1     |
+y_bala_alien_5__and0000(y_bala_alien_5__and00001:O)| NONE(y_bala_alien_5)   | 1     |
+y_bala_alien_5__and0001(y_bala_alien_5__and00011:O)| NONE(y_bala_alien_5)   | 1     |
+y_bala_alien_6__and0000(y_bala_alien_6__and00001:O)| NONE(y_bala_alien_6)   | 1     |
+y_bala_alien_6__and0001(y_bala_alien_6__and00011:O)| NONE(y_bala_alien_6)   | 1     |
+y_bala_alien_7__and0000(y_bala_alien_7__and00001:O)| NONE(y_bala_alien_7)   | 1     |
+y_bala_alien_7__and0001(y_bala_alien_7__and00011:O)| NONE(y_bala_alien_7)   | 1     |
+y_bala_alien_8__and0000(y_bala_alien_8__and00001:O)| NONE(y_bala_alien_8)   | 1     |
+y_bala_alien_8__and0001(y_bala_alien_8__and00011:O)| NONE(y_bala_alien_8)   | 1     |
+y_bala_alien_9__and0000(y_bala_alien_9__and00001:O)| NONE(y_bala_alien_9)   | 1     |
+y_bala_alien_9__and0001(y_bala_alien_9__and00011:O)| NONE(y_bala_alien_9)   | 1     |
+---------------------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 5.934ns (Maximum Frequency: 168.520MHz)
+   Minimum input arrival time before clock: 6.986ns
+   Maximum output required time after clock: 7.165ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.934ns (frequency: 168.520MHz)
+  Total number of paths / destination ports: 632 / 58
+-------------------------------------------------------------------------
+Delay:               5.934ns (Levels of Logic = 2)
+  Source:            ydib_2 (FF)
+  Destination:       x_bala_alien_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: ydib_2 to x_bala_alien_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              5   0.720   1.260  ydib_2 (ydib_2)
+     LUT4_D:I0->O          5   0.551   1.116  y_bala_alien_cmp_lt0000241_SW0 (N14)
+     LUT4:I1->O           10   0.551   1.134  x_bala_alien_not00011 (x_bala_alien_not0001)
+     FDCPE:CE                  0.602          x_bala_alien_9
+    ----------------------------------------
+    Total                      5.934ns (2.424ns logic, 3.510ns route)
+                                       (40.8% logic, 59.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 146 / 55
+-------------------------------------------------------------------------
+Offset:              6.986ns (Levels of Logic = 4)
+  Source:            reset (PAD)
+  Destination:       ydib_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to ydib_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            48   0.821   2.140  reset_IBUF (reset_IBUF)
+     LUT4:I1->O            1   0.551   0.000  y_bala_alien_cmp_lt0000241_SW5_F (N62)
+     MUXF5:I0->O           1   0.360   0.827  y_bala_alien_cmp_lt0000241_SW5 (N48)
+     LUT4:I3->O           10   0.551   1.134  ydib_and00001 (ydib_and0000)
+     FDE:CE                    0.602          ydib_0
+    ----------------------------------------
+    Total                      6.986ns (2.885ns logic, 4.101ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 20 / 20
+-------------------------------------------------------------------------
+Offset:              7.165ns (Levels of Logic = 1)
+  Source:            x_bala_alien_9 (FF)
+  Destination:       x_bala_alien<9> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: x_bala_alien_9 to x_bala_alien<9>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCPE:C->Q            1   0.720   0.801  x_bala_alien_9 (x_bala_alien_9)
+     OBUF:I->O                 5.644          x_bala_alien_9_OBUF (x_bala_alien<9>)
+    ----------------------------------------
+    Total                      7.165ns (6.364ns logic, 0.801ns route)
+                                       (88.8% logic, 11.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.14 secs
+ 
+--> 
+
+Total memory usage is 255456 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

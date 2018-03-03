@@ -1,0 +1,5 @@
+vhdl work "ipcore_dir/Alien.vhd"
+vhdl work "MovAlien.vhd"
+vhdl work "DivAlien.vhd"
+vhdl work "DIBGenerico.vhd"
+vhdl work "ALIEN_GRAL.vhd"

@@ -1,0 +1,368 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: ContH_VGA.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ContH_VGA.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ContH_VGA"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : ContH_VGA
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ContH_VGA.vhd" in Library work.
+Entity <ContH_VGA> compiled.
+Entity <ContH_VGA> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <ContH_VGA> in library <work> (architecture <Behavioral>) with generics.
+	width = 10
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <ContH_VGA> in library <work> (Architecture <Behavioral>).
+	width = 10
+Entity <ContH_VGA> analyzed. Unit <ContH_VGA> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ContH_VGA>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ContH_VGA.vhd".
+    Found 10-bit register for signal <cont>.
+    Found 10-bit adder for signal <p_cont$add0000> created at line 40.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <ContH_VGA> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 10-bit adder                                          : 1
+# Registers                                            : 10
+ 1-bit register                                        : 10
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 10-bit adder                                          : 1
+# Registers                                            : 10
+ Flip-Flops                                            : 10
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ContH_VGA> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ContH_VGA, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 10
+ Flip-Flops                                            : 10
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ContH_VGA.ngr
+Top Level Output File Name         : ContH_VGA
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 14
+
+Cell Usage :
+# BELS                             : 20
+#      LUT2                        : 3
+#      LUT2_L                      : 3
+#      LUT3                        : 2
+#      LUT3_L                      : 1
+#      LUT4                        : 8
+#      LUT4_D                      : 1
+#      LUT4_L                      : 1
+#      MUXF5                       : 1
+# FlipFlops/Latches                : 10
+#      FDCE                        : 10
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 13
+#      IBUF                        : 3
+#      OBUF                        : 10
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                       10  out of   1920     0%  
+ Number of Slice Flip Flops:             10  out of   3840     0%  
+ Number of 4 input LUTs:                 19  out of   3840     0%  
+ Number of IOs:                          14
+ Number of bonded IOBs:                  14  out of    173     8%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 10    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 10    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 4.324ns (Maximum Frequency: 231.267MHz)
+   Minimum input arrival time before clock: 4.770ns
+   Maximum output required time after clock: 7.430ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.324ns (frequency: 231.267MHz)
+  Total number of paths / destination ports: 57 / 10
+-------------------------------------------------------------------------
+Delay:               4.324ns (Levels of Logic = 3)
+  Source:            cont_9 (FF)
+  Destination:       cont_9 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: cont_9 to cont_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.720   1.112  cont_9 (cont_9)
+     LUT2:I1->O            1   0.551   0.000  Madd_p_cont_add0000_cy<6>11_SW3_F (N15)
+     MUXF5:I0->O           1   0.360   0.827  Madd_p_cont_add0000_cy<6>11_SW3 (N13)
+     LUT4:I3->O            1   0.551   0.000  cont_9_mux0000 (cont_9_mux0000)
+     FDCE:D                    0.203          cont_9
+    ----------------------------------------
+    Total                      4.324ns (2.385ns logic, 1.939ns route)
+                                       (55.2% logic, 44.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 22 / 20
+-------------------------------------------------------------------------
+Offset:              4.770ns (Levels of Logic = 4)
+  Source:            reset_s (PAD)
+  Destination:       cont_9 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset_s to cont_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   0.821   1.457  reset_s_IBUF (reset_s_IBUF)
+     LUT2:I0->O            1   0.551   0.000  Madd_p_cont_add0000_cy<6>11_SW3_F (N15)
+     MUXF5:I0->O           1   0.360   0.827  Madd_p_cont_add0000_cy<6>11_SW3 (N13)
+     LUT4:I3->O            1   0.551   0.000  cont_9_mux0000 (cont_9_mux0000)
+     FDCE:D                    0.203          cont_9
+    ----------------------------------------
+    Total                      4.770ns (2.486ns logic, 2.284ns route)
+                                       (52.1% logic, 47.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              7.430ns (Levels of Logic = 1)
+  Source:            cont_4 (FF)
+  Destination:       Q<4> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: cont_4 to Q<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             7   0.720   1.066  cont_4 (cont_4)
+     OBUF:I->O                 5.644          Q_4_OBUF (Q<4>)
+    ----------------------------------------
+    Total                      7.430ns (6.364ns logic, 1.066ns route)
+                                       (85.7% logic, 14.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.78 secs
+ 
+--> 
+
+Total memory usage is 254048 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

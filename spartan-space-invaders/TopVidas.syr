@@ -1,0 +1,616 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: TopVidas.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TopVidas.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TopVidas"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : TopVidas
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DivVidas.vhd" in Library work.
+Architecture behavioral of Entity divvidas is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/Impact.vhd" in Library work.
+Architecture behavioral of Entity impact is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ContVidas.vhd" in Library work.
+Architecture behavioral of Entity contvidas is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/BlinkVidas.vhd" in Library work.
+Architecture behavioral of Entity blinkvidas is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DIBGenerico.vhd" in Library work.
+Architecture behavioral of Entity dibgenerico is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ipcore_dir/Corazon.vhd" in Library work.
+Architecture corazon_a of Entity corazon is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ipcore_dir/FaltaCorazon.vhd" in Library work.
+Architecture faltacorazon_a of Entity faltacorazon is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopVidas.vhd" in Library work.
+Architecture behavioral of Entity topvidas is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <TopVidas> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <DivVidas> in library <work> (architecture <behavioral>) with generics.
+	limite = "000000000000000000011111"
+
+Analyzing hierarchy for entity <DivVidas> in library <work> (architecture <behavioral>) with generics.
+	limite = "000000001111111111111111"
+
+Analyzing hierarchy for entity <Impact> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ContVidas> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <BlinkVidas> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <DIBgenerico> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <TopVidas> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopVidas.vhd" line 150: Instantiating black box module <Corazon>.
+WARNING:Xst:2211 - "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopVidas.vhd" line 155: Instantiating black box module <FaltaCorazon>.
+Entity <TopVidas> analyzed. Unit <TopVidas> generated.
+
+Analyzing generic Entity <DivVidas.1> in library <work> (Architecture <behavioral>).
+	limite = "000000000000000000011111"
+Entity <DivVidas.1> analyzed. Unit <DivVidas.1> generated.
+
+Analyzing generic Entity <DivVidas.2> in library <work> (Architecture <behavioral>).
+	limite = "000000001111111111111111"
+Entity <DivVidas.2> analyzed. Unit <DivVidas.2> generated.
+
+Analyzing Entity <Impact> in library <work> (Architecture <behavioral>).
+Entity <Impact> analyzed. Unit <Impact> generated.
+
+Analyzing Entity <ContVidas> in library <work> (Architecture <behavioral>).
+Entity <ContVidas> analyzed. Unit <ContVidas> generated.
+
+Analyzing Entity <BlinkVidas> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <q> in unit <BlinkVidas> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <rst> in unit <BlinkVidas> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <BlinkVidas> analyzed. Unit <BlinkVidas> generated.
+
+Analyzing Entity <DIBgenerico> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <xrel<9>> in unit <DIBgenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <xrel<8>> in unit <DIBgenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <xrel<7>> in unit <DIBgenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <xrel<6>> in unit <DIBgenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <xrel<5>> in unit <DIBgenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <yrel<9>> in unit <DIBgenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <yrel<8>> in unit <DIBgenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <yrel<7>> in unit <DIBgenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <yrel<6>> in unit <DIBgenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <yrel<5>> in unit <DIBgenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <DIBgenerico> analyzed. Unit <DIBgenerico> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <DivVidas_1>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DivVidas.vhd".
+    Found 24-bit register for signal <cuenta>.
+    Found 24-bit adder for signal <p_cuenta$addsub0000> created at line 33.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <DivVidas_1> synthesized.
+
+
+Synthesizing Unit <DivVidas_2>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DivVidas.vhd".
+    Found 24-bit register for signal <cuenta>.
+    Found 24-bit adder for signal <p_cuenta$addsub0000> created at line 33.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <DivVidas_2> synthesized.
+
+
+Synthesizing Unit <Impact>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/Impact.vhd".
+Unit <Impact> synthesized.
+
+
+Synthesizing Unit <ContVidas>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ContVidas.vhd".
+    Found 3-bit register for signal <vidas>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <ContVidas> synthesized.
+
+
+Synthesizing Unit <BlinkVidas>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/BlinkVidas.vhd".
+WARNING:Xst:647 - Input <desap> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <cl>.
+    Found 4-bit up counter for signal <aux>.
+    Found 4-bit comparator less for signal <aux$cmp_lt0000> created at line 31.
+    Found 3-bit comparator not equal for signal <aux$cmp_ne0000> created at line 28.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <BlinkVidas> synthesized.
+
+
+Synthesizing Unit <DIBgenerico>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DIBGenerico.vhd".
+WARNING:Xst:646 - Signal <yrel<9:5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <xrel<9:5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 10-bit adder for signal <DIR_5$add0000> created at line 24.
+    Found 10-bit adder for signal <DIR_5$add0001> created at line 24.
+    Found 10-bit comparator greatequal for signal <DIR_5$cmp_ge0000> created at line 24.
+    Found 10-bit comparator greatequal for signal <DIR_5$cmp_ge0001> created at line 24.
+    Found 10-bit comparator less for signal <DIR_5$cmp_lt0000> created at line 24.
+    Found 10-bit comparator less for signal <DIR_5$cmp_lt0001> created at line 24.
+    Found 10-bit subtractor for signal <xrel>.
+    Found 10-bit subtractor for signal <yrel>.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <DIBgenerico> synthesized.
+
+
+Synthesizing Unit <TopVidas>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopVidas.vhd".
+WARNING:Xst:647 - Input <rgb_nave> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 3-bit register for signal <rgb>.
+    Found 10-bit comparator greater for signal <rgb$cmp_gt0000> created at line 178.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <TopVidas> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 14
+ 10-bit adder                                          : 6
+ 10-bit subtractor                                     : 6
+ 24-bit adder                                          : 2
+# Registers                                            : 5
+ 1-bit register                                        : 1
+ 24-bit register                                       : 2
+ 3-bit register                                        : 2
+# Comparators                                          : 13
+ 10-bit comparator greatequal                          : 6
+ 10-bit comparator greater                             : 1
+ 10-bit comparator less                                : 6
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/Corazon.ngc>.
+Reading core <ipcore_dir/FaltaCorazon.ngc>.
+Loading core <Corazon> for timing and area information for instance <MemoriaCorazon>.
+Loading core <FaltaCorazon> for timing and area information for instance <MemoriaFaltaCorazon>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 14
+ 10-bit adder                                          : 6
+ 24-bit adder                                          : 2
+ 5-bit subtractor                                      : 6
+# Registers                                            : 55
+ Flip-Flops                                            : 55
+# Comparators                                          : 13
+ 10-bit comparator greatequal                          : 6
+ 10-bit comparator greater                             : 1
+ 10-bit comparator less                                : 6
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:1901 - Instance U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram in unit U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram of type RAMB16_S18_S18 has been replaced by RAMB16
+INFO:Xst:1901 - Instance U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram in unit U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram of type RAMB16_S18_S18 has been replaced by RAMB16
+
+Optimizing unit <TopVidas> ...
+
+Optimizing unit <DivVidas_1> ...
+
+Optimizing unit <DivVidas_2> ...
+
+Optimizing unit <ContVidas> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TopVidas, actual ratio is 4.
+FlipFlop ParpaedoVidas/cl has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 56
+ Flip-Flops                                            : 56
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TopVidas.ngr
+Top Level Output File Name         : TopVidas
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 39
+
+Cell Usage :
+# BELS                             : 273
+#      GND                         : 5
+#      INV                         : 2
+#      LUT1                        : 46
+#      LUT2                        : 50
+#      LUT3                        : 15
+#      LUT4                        : 39
+#      LUT4_D                      : 2
+#      LUT4_L                      : 3
+#      MUXCY                       : 58
+#      MUXF5                       : 2
+#      VCC                         : 3
+#      XORCY                       : 48
+# FlipFlops/Latches                : 62
+#      FD                          : 3
+#      FDC                         : 51
+#      FDP                         : 2
+#      FDRE                        : 6
+# RAMS                             : 2
+#      RAMB16                      : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 31
+#      IBUF                        : 24
+#      OBUF                        : 7
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                       90  out of   1920     4%  
+ Number of Slice Flip Flops:             61  out of   3840     1%  
+ Number of 4 input LUTs:                157  out of   3840     4%  
+ Number of IOs:                          39
+ Number of bonded IOBs:                  32  out of    173    18%  
+    IOB Flip Flops:                       1
+ Number of BRAMs:                         2  out of     12    16%  
+ Number of GCLKs:                         2  out of      8    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                    | Clock buffer(FF name)                                                                                                                                                                                                                                      | Load  |
+------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+clk                                             | BUFGP                                                                                                                                                                                                                                                      | 40    |
+MemoriaCorazon/N1                               | NONE(MemoriaCorazon/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram)     | 1     |
+MemoriaFaltaCorazon/N1                          | NONE(MemoriaFaltaCorazon/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram)| 1     |
+vols1(DivisorVelVidas/vel_cmp_eq0000_wg_cy<5>:O)| BUFG(*)(DivisorVidas/cuenta_23)                                                                                                                                                                                                                            | 24    |
+------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------+------------------------+-------+
+Control Signal                                     | Buffer(FF name)        | Load  |
+---------------------------------------------------+------------------------+-------+
+reset                                              | IBUF                   | 51    |
+ParpaedoVidas/cl_or0000(ParpaedoVidas/cl_or00001:O)| NONE(ParpaedoVidas/cl) | 2     |
+---------------------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.008ns (Maximum Frequency: 124.875MHz)
+   Minimum input arrival time before clock: 10.368ns
+   Maximum output required time after clock: 8.976ns
+   Maximum combinational path delay: 9.073ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.008ns (frequency: 124.875MHz)
+  Total number of paths / destination ports: 970 / 50
+-------------------------------------------------------------------------
+Delay:               8.008ns (Levels of Logic = 5)
+  Source:            ParpaedoVidas/cl (FF)
+  Destination:       MemoriaCorazon/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram (RAM)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: ParpaedoVidas/cl to MemoriaCorazon/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              1   0.720   0.827  ParpaedoVidas/cl (ParpaedoVidas/cl)
+     LUT4_D:I3->O          3   0.551   0.975  DibujaVidas2/DIR_5_and00001 (N12)
+     LUT3:I2->O           12   0.551   1.186  DibujaVidas3/DIR_5_and000077 (DibujaVidas3/DIR_5_and0000)
+     LUT4:I2->O            1   0.551   0.869  DIRS<4>40 (DIRS<4>40)
+     LUT4:I2->O            2   0.551   0.877  DIRS<4>57 (DIRS<4>)
+     begin scope: 'MemoriaCorazon'
+     begin scope: 'U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram'
+     RAMB16:ADDRA8             0.350          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram
+    ----------------------------------------
+    Total                      8.008ns (3.274ns logic, 4.734ns route)
+                                       (40.9% logic, 59.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'vols1'
+  Clock period: 6.985ns (frequency: 143.164MHz)
+  Total number of paths / destination ports: 876 / 24
+-------------------------------------------------------------------------
+Delay:               6.985ns (Levels of Logic = 25)
+  Source:            DivisorVidas/cuenta_1 (FF)
+  Destination:       DivisorVidas/cuenta_23 (FF)
+  Source Clock:      vols1 rising
+  Destination Clock: vols1 rising
+
+  Data Path: DivisorVidas/cuenta_1 to DivisorVidas/cuenta_23
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.720   1.216  DivisorVidas/cuenta_1 (DivisorVidas/cuenta_1)
+     LUT1:I0->O            1   0.551   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<1>_rt (DivisorVidas/Madd_p_cuenta_addsub0000_cy<1>_rt)
+     MUXCY:S->O            1   0.500   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<1> (DivisorVidas/Madd_p_cuenta_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<2> (DivisorVidas/Madd_p_cuenta_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<3> (DivisorVidas/Madd_p_cuenta_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<4> (DivisorVidas/Madd_p_cuenta_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<5> (DivisorVidas/Madd_p_cuenta_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<6> (DivisorVidas/Madd_p_cuenta_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<7> (DivisorVidas/Madd_p_cuenta_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<8> (DivisorVidas/Madd_p_cuenta_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<9> (DivisorVidas/Madd_p_cuenta_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<10> (DivisorVidas/Madd_p_cuenta_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<11> (DivisorVidas/Madd_p_cuenta_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<12> (DivisorVidas/Madd_p_cuenta_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<13> (DivisorVidas/Madd_p_cuenta_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<14> (DivisorVidas/Madd_p_cuenta_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<15> (DivisorVidas/Madd_p_cuenta_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<16> (DivisorVidas/Madd_p_cuenta_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<17> (DivisorVidas/Madd_p_cuenta_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<18> (DivisorVidas/Madd_p_cuenta_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<19> (DivisorVidas/Madd_p_cuenta_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<20> (DivisorVidas/Madd_p_cuenta_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<21> (DivisorVidas/Madd_p_cuenta_addsub0000_cy<21>)
+     MUXCY:CI->O           0   0.064   0.000  DivisorVidas/Madd_p_cuenta_addsub0000_cy<22> (DivisorVidas/Madd_p_cuenta_addsub0000_cy<22>)
+     XORCY:CI->O           1   0.904   0.996  DivisorVidas/Madd_p_cuenta_addsub0000_xor<23> (DivisorVidas/p_cuenta_addsub0000<23>)
+     LUT2:I1->O            1   0.551   0.000  DivisorVidas/p_cuenta<23>1 (DivisorVidas/p_cuenta<23>)
+     FDC:D                     0.203          DivisorVidas/cuenta_23
+    ----------------------------------------
+    Total                      6.985ns (4.773ns logic, 2.212ns route)
+                                       (68.3% logic, 31.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1294 / 26
+-------------------------------------------------------------------------
+Offset:              10.368ns (Levels of Logic = 7)
+  Source:            pos_x<1> (PAD)
+  Destination:       MemoriaCorazon/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram (RAM)
+  Destination Clock: clk rising
+
+  Data Path: pos_x<1> to MemoriaCorazon/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   0.821   1.457  pos_x_1_IBUF (DibujaVidas3/Msub_xrel_Madd_cy<1>)
+     LUT3:I0->O            2   0.551   0.903  DibujaVidas2/DIR_5_and000037_SW0 (DIRS<4>34)
+     LUT4:I3->O            1   0.551   1.140  DibujaVidas2/DIR_5_and000037 (DibujaVidas2/DIR_5_and000037)
+     LUT4_D:I0->O         13   0.551   1.196  DibujaVidas2/DIR_5_and000079 (DibujaVidas2/DIR_5_and0000)
+     LUT4:I3->O            1   0.551   0.869  DIRS<4>40 (DIRS<4>40)
+     LUT4:I2->O            2   0.551   0.877  DIRS<4>57 (DIRS<4>)
+     begin scope: 'MemoriaCorazon'
+     begin scope: 'U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram'
+     RAMB16:ADDRA8             0.350          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram
+    ----------------------------------------
+    Total                     10.368ns (3.926ns logic, 6.442ns route)
+                                       (37.9% logic, 62.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 7 / 5
+-------------------------------------------------------------------------
+Offset:              8.976ns (Levels of Logic = 2)
+  Source:            ContadorVidas/vidas_0 (FF)
+  Destination:       muerto (PAD)
+  Source Clock:      clk rising
+
+  Data Path: ContadorVidas/vidas_0 to muerto
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.720   1.260  ContadorVidas/vidas_0 (ContadorVidas/vidas_0)
+     LUT3:I0->O            1   0.551   0.801  muerto1 (muerto_OBUF)
+     OBUF:I->O                 5.644          muerto_OBUF (muerto)
+    ----------------------------------------
+    Total                      8.976ns (6.915ns logic, 2.061ns route)
+                                       (77.0% logic, 23.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 3 / 1
+-------------------------------------------------------------------------
+Delay:               9.073ns (Levels of Logic = 3)
+  Source:            rgb_alien<2> (PAD)
+  Destination:       rst_ba (PAD)
+
+  Data Path: rgb_alien<2> to rst_ba
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.821   1.140  rgb_alien_2_IBUF (rgb_alien_2_IBUF)
+     LUT3:I0->O            4   0.551   0.917  Impacto/muere_and00001 (mueres)
+     OBUF:I->O                 5.644          rst_ba_OBUF (rst_ba)
+    ----------------------------------------
+    Total                      9.073ns (7.016ns logic, 2.057ns route)
+                                       (77.3% logic, 22.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.72 secs
+ 
+--> 
+
+Total memory usage is 262304 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :   15 (   0 filtered)
+

@@ -1,0 +1,518 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: ALIEN_GRAL.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ALIEN_GRAL.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ALIEN_GRAL"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : ALIEN_GRAL
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DivAlien.vhd" in Library work.
+Architecture behavioral of Entity divalien is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MovAlien.vhd" in Library work.
+Architecture behavioral of Entity movalien is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DIBGenerico.vhd" in Library work.
+Architecture behavioral of Entity dibgenerico is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ipcore_dir/Alien.vhd" in Library work.
+Entity <Alien> compiled.
+Entity <Alien> (Architecture <Alien_a>) compiled.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ALIEN_GRAL.vhd" in Library work.
+Entity <ALIEN_GRAL> compiled.
+Entity <ALIEN_GRAL> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <ALIEN_GRAL> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <DivAlien> in library <work> (architecture <behavioral>) with generics.
+	limite = "000011111111111111111111"
+
+Analyzing hierarchy for entity <MovAlien> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <DIBgenerico> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <ALIEN_GRAL> in library <work> (Architecture <Behavioral>).
+WARNING:Xst:2211 - "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ALIEN_GRAL.vhd" line 79: Instantiating black box module <Alien>.
+Entity <ALIEN_GRAL> analyzed. Unit <ALIEN_GRAL> generated.
+
+Analyzing generic Entity <DivAlien> in library <work> (Architecture <behavioral>).
+	limite = "000011111111111111111111"
+Entity <DivAlien> analyzed. Unit <DivAlien> generated.
+
+Analyzing Entity <MovAlien> in library <work> (Architecture <behavioral>).
+Entity <MovAlien> analyzed. Unit <MovAlien> generated.
+
+Analyzing Entity <DIBgenerico> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <xrel<9>> in unit <DIBgenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <xrel<8>> in unit <DIBgenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <xrel<7>> in unit <DIBgenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <xrel<6>> in unit <DIBgenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <xrel<5>> in unit <DIBgenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <yrel<9>> in unit <DIBgenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <yrel<8>> in unit <DIBgenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <yrel<7>> in unit <DIBgenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <yrel<6>> in unit <DIBgenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <yrel<5>> in unit <DIBgenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <DIBgenerico> analyzed. Unit <DIBgenerico> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <DivAlien>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DivAlien.vhd".
+    Found 24-bit register for signal <cuenta>.
+    Found 24-bit adder for signal <p_cuenta$addsub0000> created at line 34.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <DivAlien> synthesized.
+
+
+Synthesizing Unit <MovAlien>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MovAlien.vhd".
+    Found 1-bit register for signal <q>.
+    Found 10-bit register for signal <xdib>.
+    Found 10-bit comparator greatequal for signal <xdib$cmp_ge0000> created at line 31.
+    Found 10-bit comparator lessequal for signal <xdib$cmp_le0000> created at line 34.
+    Found 10-bit addsub for signal <xdib$mux0003>.
+    Found 9-bit up accumulator for signal <ydib>.
+    Found 10-bit comparator greater for signal <ydib$cmp_gt0000> created at line 34.
+    Found 10-bit comparator less for signal <ydib$cmp_lt0000> created at line 31.
+    Summary:
+	inferred   1 Accumulator(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <MovAlien> synthesized.
+
+
+Synthesizing Unit <DIBgenerico>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DIBGenerico.vhd".
+WARNING:Xst:646 - Signal <yrel<9:5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <xrel<9:5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 10-bit adder for signal <DIR_5$add0000> created at line 24.
+    Found 10-bit adder for signal <DIR_5$add0001> created at line 24.
+    Found 10-bit comparator greatequal for signal <DIR_5$cmp_ge0000> created at line 24.
+    Found 10-bit comparator greatequal for signal <DIR_5$cmp_ge0001> created at line 24.
+    Found 10-bit comparator less for signal <DIR_5$cmp_lt0000> created at line 24.
+    Found 10-bit comparator less for signal <DIR_5$cmp_lt0001> created at line 24.
+    Found 10-bit subtractor for signal <xrel>.
+    Found 10-bit subtractor for signal <yrel>.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <DIBgenerico> synthesized.
+
+
+Synthesizing Unit <ALIEN_GRAL>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ALIEN_GRAL.vhd".
+Unit <ALIEN_GRAL> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 6
+ 10-bit adder                                          : 2
+ 10-bit addsub                                         : 1
+ 10-bit subtractor                                     : 2
+ 24-bit adder                                          : 1
+# Accumulators                                         : 1
+ 9-bit up accumulator                                  : 1
+# Registers                                            : 3
+ 1-bit register                                        : 1
+ 10-bit register                                       : 1
+ 24-bit register                                       : 1
+# Comparators                                          : 8
+ 10-bit comparator greatequal                          : 3
+ 10-bit comparator greater                             : 1
+ 10-bit comparator less                                : 3
+ 10-bit comparator lessequal                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/Alien.ngc>.
+Loading core <Alien> for timing and area information for instance <MemoriaAlien>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 6
+ 10-bit adder                                          : 2
+ 10-bit addsub                                         : 1
+ 24-bit adder                                          : 1
+ 5-bit subtractor                                      : 2
+# Accumulators                                         : 1
+ 9-bit up accumulator                                  : 1
+# Registers                                            : 35
+ Flip-Flops                                            : 35
+# Comparators                                          : 8
+ 10-bit comparator greatequal                          : 3
+ 10-bit comparator greater                             : 1
+ 10-bit comparator less                                : 3
+ 10-bit comparator lessequal                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <ydib_1> has a constant value of 0 in block <MovAlien>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ydib_2> has a constant value of 0 in block <MovAlien>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ydib_3> has a constant value of 0 in block <MovAlien>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ydib_4> has a constant value of 0 in block <MovAlien>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:1901 - Instance U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram in unit U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram of type RAMB16_S18_S18 has been replaced by RAMB16
+
+Optimizing unit <ALIEN_GRAL> ...
+
+Optimizing unit <DivAlien> ...
+
+Optimizing unit <DIBgenerico> ...
+
+Optimizing unit <MovAlien> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ALIEN_GRAL, actual ratio is 4.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 40
+ Flip-Flops                                            : 40
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ALIEN_GRAL.ngr
+Top Level Output File Name         : ALIEN_GRAL
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 46
+
+Cell Usage :
+# BELS                             : 287
+#      GND                         : 3
+#      INV                         : 16
+#      LUT1                        : 23
+#      LUT2                        : 58
+#      LUT2_L                      : 2
+#      LUT3                        : 6
+#      LUT3_L                      : 10
+#      LUT4                        : 35
+#      LUT4_D                      : 2
+#      MUXCY                       : 86
+#      VCC                         : 2
+#      XORCY                       : 44
+# FlipFlops/Latches                : 43
+#      FDC                         : 24
+#      FDCE                        : 12
+#      FDPE                        : 4
+#      FDRE                        : 3
+# RAMS                             : 1
+#      RAMB16                      : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 45
+#      IBUF                        : 22
+#      OBUF                        : 23
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                       81  out of   1920     4%  
+ Number of Slice Flip Flops:             43  out of   3840     1%  
+ Number of 4 input LUTs:                152  out of   3840     3%  
+ Number of IOs:                          46
+ Number of bonded IOBs:                  46  out of    173    26%  
+ Number of BRAMs:                         1  out of     12     8%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                                                                                                                                                                                               | Load  |
+-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+clk                                | BUFGP                                                                                                                                                                                                                                               | 44    |
+MemoriaAlien/N1                    | NONE(MemoriaAlien/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram)| 1     |
+-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 40    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.798ns (Maximum Frequency: 113.662MHz)
+   Minimum input arrival time before clock: 7.641ns
+   Maximum output required time after clock: 7.508ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.798ns (frequency: 113.662MHz)
+  Total number of paths / destination ports: 3172 / 66
+-------------------------------------------------------------------------
+Delay:               8.798ns (Levels of Logic = 14)
+  Source:            MovimientoAlien/xdib_6 (FF)
+  Destination:       MovimientoAlien/xdib_9 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: MovimientoAlien/xdib_6 to MovimientoAlien/xdib_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             9   0.720   1.463  MovimientoAlien/xdib_6 (MovimientoAlien/xdib_6)
+     LUT2_L:I0->LO         1   0.551   0.126  MovimientoAlien/ydib_cmp_lt00001_SW0 (N2)
+     LUT4:I3->O           11   0.551   1.170  MovimientoAlien/ydib_cmp_lt00001 (MovimientoAlien/ydib_cmp_lt0000)
+     LUT4_D:I3->O          1   0.551   0.996  MovimientoAlien/xdib_mux0004<9>1 (MovimientoAlien/xdib_mux0004<9>)
+     LUT3:I1->O            1   0.551   0.000  MovimientoAlien/Maddsub_xdib_mux0003_lut<0> (MovimientoAlien/Maddsub_xdib_mux0003_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  MovimientoAlien/Maddsub_xdib_mux0003_cy<0> (MovimientoAlien/Maddsub_xdib_mux0003_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  MovimientoAlien/Maddsub_xdib_mux0003_cy<1> (MovimientoAlien/Maddsub_xdib_mux0003_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  MovimientoAlien/Maddsub_xdib_mux0003_cy<2> (MovimientoAlien/Maddsub_xdib_mux0003_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  MovimientoAlien/Maddsub_xdib_mux0003_cy<3> (MovimientoAlien/Maddsub_xdib_mux0003_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  MovimientoAlien/Maddsub_xdib_mux0003_cy<4> (MovimientoAlien/Maddsub_xdib_mux0003_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  MovimientoAlien/Maddsub_xdib_mux0003_cy<5> (MovimientoAlien/Maddsub_xdib_mux0003_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  MovimientoAlien/Maddsub_xdib_mux0003_cy<6> (MovimientoAlien/Maddsub_xdib_mux0003_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  MovimientoAlien/Maddsub_xdib_mux0003_cy<7> (MovimientoAlien/Maddsub_xdib_mux0003_cy<7>)
+     MUXCY:CI->O           0   0.064   0.000  MovimientoAlien/Maddsub_xdib_mux0003_cy<8> (MovimientoAlien/Maddsub_xdib_mux0003_cy<8>)
+     XORCY:CI->O           1   0.904   0.000  MovimientoAlien/Maddsub_xdib_mux0003_xor<9> (MovimientoAlien/xdib_mux0003<9>)
+     FDCE:D                    0.203          MovimientoAlien/xdib_9
+    ----------------------------------------
+    Total                      8.798ns (5.043ns logic, 3.755ns route)
+                                       (57.3% logic, 42.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 860 / 10
+-------------------------------------------------------------------------
+Offset:              7.641ns (Levels of Logic = 15)
+  Source:            pos_x<0> (PAD)
+  Destination:       MemoriaAlien/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram (RAM)
+  Destination Clock: clk rising
+
+  Data Path: pos_x<0> to MemoriaAlien/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.821   1.246  pos_x_0_IBUF (pos_x_0_IBUF)
+     LUT2:I0->O            1   0.551   0.000  DibujaAlien/Mcompar_DIR_5_cmp_ge0000_lut<0> (DibujaAlien/Mcompar_DIR_5_cmp_ge0000_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  DibujaAlien/Mcompar_DIR_5_cmp_ge0000_cy<0> (DibujaAlien/Mcompar_DIR_5_cmp_ge0000_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  DibujaAlien/Mcompar_DIR_5_cmp_ge0000_cy<1> (DibujaAlien/Mcompar_DIR_5_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  DibujaAlien/Mcompar_DIR_5_cmp_ge0000_cy<2> (DibujaAlien/Mcompar_DIR_5_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  DibujaAlien/Mcompar_DIR_5_cmp_ge0000_cy<3> (DibujaAlien/Mcompar_DIR_5_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  DibujaAlien/Mcompar_DIR_5_cmp_ge0000_cy<4> (DibujaAlien/Mcompar_DIR_5_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  DibujaAlien/Mcompar_DIR_5_cmp_ge0000_cy<5> (DibujaAlien/Mcompar_DIR_5_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  DibujaAlien/Mcompar_DIR_5_cmp_ge0000_cy<6> (DibujaAlien/Mcompar_DIR_5_cmp_ge0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  DibujaAlien/Mcompar_DIR_5_cmp_ge0000_cy<7> (DibujaAlien/Mcompar_DIR_5_cmp_ge0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  DibujaAlien/Mcompar_DIR_5_cmp_ge0000_cy<8> (DibujaAlien/Mcompar_DIR_5_cmp_ge0000_cy<8>)
+     MUXCY:CI->O          10   0.303   1.329  DibujaAlien/Mcompar_DIR_5_cmp_ge0000_cy<9> (DibujaAlien/DIR_5_cmp_ge0000)
+     LUT3_L:I1->LO         1   0.551   0.126  DibujaAlien/DIR_9_mux00001_SW0 (N36)
+     LUT4:I3->O            1   0.551   0.801  DibujaAlien/DIR_9_mux00001 (DIRS<9>)
+     begin scope: 'MemoriaAlien'
+     begin scope: 'U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram'
+     RAMB16:ADDRA13            0.350          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram
+    ----------------------------------------
+    Total                      7.641ns (4.139ns logic, 3.502ns route)
+                                       (54.2% logic, 45.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 18 / 18
+-------------------------------------------------------------------------
+Offset:              7.508ns (Levels of Logic = 1)
+  Source:            MovimientoAlien/xdib_5 (FF)
+  Destination:       x_alien<5> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: MovimientoAlien/xdib_5 to x_alien<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q            11   0.720   1.144  MovimientoAlien/xdib_5 (MovimientoAlien/xdib_5)
+     OBUF:I->O                 5.644          x_alien_5_OBUF (x_alien<5>)
+    ----------------------------------------
+    Total                      7.508ns (6.364ns logic, 1.144ns route)
+                                       (84.8% logic, 15.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.38 secs
+ 
+--> 
+
+Total memory usage is 259936 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
+

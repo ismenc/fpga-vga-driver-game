@@ -1,0 +1,519 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: TopBala.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TopBala.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TopBala"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : TopBala
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DivBala.vhd" in Library work.
+Architecture behavioral of Entity divbala is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MovBala.vhd" in Library work.
+Architecture behavioral of Entity movbala is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DIBGenerico.vhd" in Library work.
+Entity <dibgenerico> compiled.
+Entity <dibgenerico> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ipcore_dir/Bala.vhd" in Library work.
+Architecture bala_a of Entity bala is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopBala.vhd" in Library work.
+Architecture behavioral of Entity topbala is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <TopBala> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <DivBala> in library <work> (architecture <behavioral>) with generics.
+	limite = "00000111111111111111111"
+
+Analyzing hierarchy for entity <MovBala> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <DIBgenerico> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <TopBala> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopBala.vhd" line 88: Instantiating black box module <Bala>.
+Entity <TopBala> analyzed. Unit <TopBala> generated.
+
+Analyzing generic Entity <DivBala> in library <work> (Architecture <behavioral>).
+	limite = "00000111111111111111111"
+Entity <DivBala> analyzed. Unit <DivBala> generated.
+
+Analyzing Entity <MovBala> in library <work> (Architecture <behavioral>).
+Entity <MovBala> analyzed. Unit <MovBala> generated.
+
+Analyzing Entity <DIBgenerico> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DIBGenerico.vhd" line 21: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <yrel>, <xrel>
+Entity <DIBgenerico> analyzed. Unit <DIBgenerico> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <DivBala>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DivBala.vhd".
+    Found 23-bit register for signal <cuenta>.
+    Found 23-bit adder for signal <p_cuenta$addsub0000> created at line 33.
+    Summary:
+	inferred  23 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <DivBala> synthesized.
+
+
+Synthesizing Unit <MovBala>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MovBala.vhd".
+    Found 10-bit register for signal <y_bala>.
+    Found 10-bit register for signal <x_bala>.
+    Found 1-bit register for signal <q>.
+    Found 10-bit register for signal <xdib>.
+    Found 10-bit comparator greatequal for signal <y_bala$cmp_ge0000> created at line 40.
+    Found 10-bit comparator less for signal <y_bala$cmp_lt0000> created at line 36.
+    Found 10-bit register for signal <ydib>.
+    Found 10-bit subtractor for signal <ydib$addsub0000> created at line 37.
+    Summary:
+	inferred  21 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <MovBala> synthesized.
+
+
+Synthesizing Unit <DIBgenerico>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DIBGenerico.vhd".
+WARNING:Xst:646 - Signal <yrel<9:5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <xrel<9:5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 10-bit adder for signal <DIR_5$add0000> created at line 24.
+    Found 10-bit adder for signal <DIR_5$add0001> created at line 24.
+    Found 10-bit comparator greatequal for signal <DIR_5$cmp_ge0000> created at line 24.
+    Found 10-bit comparator greatequal for signal <DIR_5$cmp_ge0001> created at line 24.
+    Found 10-bit comparator less for signal <DIR_5$cmp_lt0000> created at line 24.
+    Found 10-bit comparator less for signal <DIR_5$cmp_lt0001> created at line 24.
+    Found 10-bit subtractor for signal <xrel>.
+    Found 10-bit subtractor for signal <yrel>.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <DIBgenerico> synthesized.
+
+
+Synthesizing Unit <TopBala>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopBala.vhd".
+Unit <TopBala> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 6
+ 10-bit adder                                          : 2
+ 10-bit subtractor                                     : 3
+ 23-bit adder                                          : 1
+# Registers                                            : 6
+ 1-bit register                                        : 1
+ 10-bit register                                       : 4
+ 23-bit register                                       : 1
+# Comparators                                          : 6
+ 10-bit comparator greatequal                          : 3
+ 10-bit comparator less                                : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/Bala.ngc>.
+Loading core <Bala> for timing and area information for instance <MemoriaBala>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 6
+ 10-bit adder                                          : 2
+ 10-bit subtractor                                     : 1
+ 23-bit adder                                          : 1
+ 5-bit subtractor                                      : 2
+# Registers                                            : 44
+ Flip-Flops                                            : 44
+# Comparators                                          : 6
+ 10-bit comparator greatequal                          : 3
+ 10-bit comparator less                                : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:1901 - Instance U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram in unit U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram of type RAMB16_S18_S18 has been replaced by RAMB16
+
+Optimizing unit <TopBala> ...
+
+Optimizing unit <DivBala> ...
+
+Optimizing unit <DIBgenerico> ...
+
+Optimizing unit <MovBala> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TopBala, actual ratio is 6.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 64
+ Flip-Flops                                            : 64
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TopBala.ngr
+Top Level Output File Name         : TopBala
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 67
+
+Cell Usage :
+# BELS                             : 335
+#      GND                         : 3
+#      INV                         : 1
+#      LUT1                        : 22
+#      LUT2                        : 68
+#      LUT3                        : 69
+#      LUT3_D                      : 2
+#      LUT4                        : 40
+#      LUT4_D                      : 4
+#      LUT4_L                      : 10
+#      MUXCY                       : 76
+#      MUXF5                       : 5
+#      VCC                         : 2
+#      XORCY                       : 33
+# FlipFlops/Latches                : 67
+#      FDC                         : 23
+#      FDCE                        : 1
+#      FDCPE                       : 20
+#      FDE                         : 20
+#      FDRE                        : 3
+# RAMS                             : 1
+#      RAMB16                      : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 66
+#      IBUF                        : 43
+#      OBUF                        : 23
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                      120  out of   1920     6%  
+ Number of Slice Flip Flops:             67  out of   3840     1%  
+ Number of 4 input LUTs:                216  out of   3840     5%  
+ Number of IOs:                          67
+ Number of bonded IOBs:                  67  out of    173    38%  
+ Number of BRAMs:                         1  out of     12     8%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                                                                                                                                                                                              | Load  |
+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+clk                                | BUFGP                                                                                                                                                                                                                                              | 68    |
+MemoriaBala/N1                     | NONE(MemoriaBala/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram)| 1     |
+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------------------+------------------------------+-------+
+Control Signal                                                       | Buffer(FF name)              | Load  |
+---------------------------------------------------------------------+------------------------------+-------+
+resets(resets1:O)                                                    | NONE(DivisorBala/cuenta_0)   | 24    |
+MovimientoBala/x_bala_0__and0000(MovimientoBala/x_bala_0__and00001:O)| NONE(MovimientoBala/x_bala_0)| 1     |
+MovimientoBala/x_bala_0__and0001(MovimientoBala/x_bala_0__and00011:O)| NONE(MovimientoBala/x_bala_0)| 1     |
+MovimientoBala/x_bala_1__and0000(MovimientoBala/x_bala_1__and00001:O)| NONE(MovimientoBala/x_bala_1)| 1     |
+MovimientoBala/x_bala_1__and0001(MovimientoBala/x_bala_1__and00011:O)| NONE(MovimientoBala/x_bala_1)| 1     |
+MovimientoBala/x_bala_2__and0000(MovimientoBala/x_bala_2__and00001:O)| NONE(MovimientoBala/x_bala_2)| 1     |
+MovimientoBala/x_bala_2__and0001(MovimientoBala/x_bala_2__and00011:O)| NONE(MovimientoBala/x_bala_2)| 1     |
+MovimientoBala/x_bala_3__and0000(MovimientoBala/x_bala_3__and00001:O)| NONE(MovimientoBala/x_bala_3)| 1     |
+MovimientoBala/x_bala_3__and0001(MovimientoBala/x_bala_3__and00011:O)| NONE(MovimientoBala/x_bala_3)| 1     |
+MovimientoBala/x_bala_4__and0000(MovimientoBala/x_bala_4__and00001:O)| NONE(MovimientoBala/x_bala_4)| 1     |
+MovimientoBala/x_bala_4__and0001(MovimientoBala/x_bala_4__and00011:O)| NONE(MovimientoBala/x_bala_4)| 1     |
+MovimientoBala/x_bala_5__and0000(MovimientoBala/x_bala_5__and00001:O)| NONE(MovimientoBala/x_bala_5)| 1     |
+MovimientoBala/x_bala_5__and0001(MovimientoBala/x_bala_5__and00011:O)| NONE(MovimientoBala/x_bala_5)| 1     |
+MovimientoBala/x_bala_6__and0000(MovimientoBala/x_bala_6__and00001:O)| NONE(MovimientoBala/x_bala_6)| 1     |
+MovimientoBala/x_bala_6__and0001(MovimientoBala/x_bala_6__and00011:O)| NONE(MovimientoBala/x_bala_6)| 1     |
+MovimientoBala/x_bala_7__and0000(MovimientoBala/x_bala_7__and00001:O)| NONE(MovimientoBala/x_bala_7)| 1     |
+MovimientoBala/x_bala_7__and0001(MovimientoBala/x_bala_7__and00011:O)| NONE(MovimientoBala/x_bala_7)| 1     |
+MovimientoBala/x_bala_8__and0000(MovimientoBala/x_bala_8__and00001:O)| NONE(MovimientoBala/x_bala_8)| 1     |
+MovimientoBala/x_bala_8__and0001(MovimientoBala/x_bala_8__and00011:O)| NONE(MovimientoBala/x_bala_8)| 1     |
+MovimientoBala/x_bala_9__and0000(MovimientoBala/x_bala_9__and00001:O)| NONE(MovimientoBala/x_bala_9)| 1     |
+MovimientoBala/x_bala_9__and0001(MovimientoBala/x_bala_9__and00011:O)| NONE(MovimientoBala/x_bala_9)| 1     |
+MovimientoBala/y_bala_0__and0000(MovimientoBala/y_bala_0__and00001:O)| NONE(MovimientoBala/y_bala_0)| 1     |
+MovimientoBala/y_bala_0__and0001(MovimientoBala/y_bala_0__and00011:O)| NONE(MovimientoBala/y_bala_0)| 1     |
+MovimientoBala/y_bala_1__and0000(MovimientoBala/y_bala_1__and00001:O)| NONE(MovimientoBala/y_bala_1)| 1     |
+MovimientoBala/y_bala_1__and0001(MovimientoBala/y_bala_1__and00011:O)| NONE(MovimientoBala/y_bala_1)| 1     |
+MovimientoBala/y_bala_2__and0000(MovimientoBala/y_bala_2__and00001:O)| NONE(MovimientoBala/y_bala_2)| 1     |
+MovimientoBala/y_bala_2__and0001(MovimientoBala/y_bala_2__and00011:O)| NONE(MovimientoBala/y_bala_2)| 1     |
+MovimientoBala/y_bala_3__and0000(MovimientoBala/y_bala_3__and00001:O)| NONE(MovimientoBala/y_bala_3)| 1     |
+MovimientoBala/y_bala_3__and0001(MovimientoBala/y_bala_3__and00011:O)| NONE(MovimientoBala/y_bala_3)| 1     |
+MovimientoBala/y_bala_4__and0000(MovimientoBala/y_bala_4__and00001:O)| NONE(MovimientoBala/y_bala_4)| 1     |
+MovimientoBala/y_bala_4__and0001(MovimientoBala/y_bala_4__and00011:O)| NONE(MovimientoBala/y_bala_4)| 1     |
+MovimientoBala/y_bala_5__and0000(MovimientoBala/y_bala_5__and00001:O)| NONE(MovimientoBala/y_bala_5)| 1     |
+MovimientoBala/y_bala_5__and0001(MovimientoBala/y_bala_5__and00011:O)| NONE(MovimientoBala/y_bala_5)| 1     |
+MovimientoBala/y_bala_6__and0000(MovimientoBala/y_bala_6__and00001:O)| NONE(MovimientoBala/y_bala_6)| 1     |
+MovimientoBala/y_bala_6__and0001(MovimientoBala/y_bala_6__and00011:O)| NONE(MovimientoBala/y_bala_6)| 1     |
+MovimientoBala/y_bala_7__and0000(MovimientoBala/y_bala_7__and00001:O)| NONE(MovimientoBala/y_bala_7)| 1     |
+MovimientoBala/y_bala_7__and0001(MovimientoBala/y_bala_7__and00011:O)| NONE(MovimientoBala/y_bala_7)| 1     |
+MovimientoBala/y_bala_8__and0000(MovimientoBala/y_bala_8__and00001:O)| NONE(MovimientoBala/y_bala_8)| 1     |
+MovimientoBala/y_bala_8__and0001(MovimientoBala/y_bala_8__and00011:O)| NONE(MovimientoBala/y_bala_8)| 1     |
+MovimientoBala/y_bala_9__and0000(MovimientoBala/y_bala_9__and00001:O)| NONE(MovimientoBala/y_bala_9)| 1     |
+MovimientoBala/y_bala_9__and0001(MovimientoBala/y_bala_9__and00011:O)| NONE(MovimientoBala/y_bala_9)| 1     |
+---------------------------------------------------------------------+------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 7.941ns (Maximum Frequency: 125.926MHz)
+   Minimum input arrival time before clock: 8.339ns
+   Maximum output required time after clock: 7.430ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.941ns (frequency: 125.926MHz)
+  Total number of paths / destination ports: 3256 / 104
+-------------------------------------------------------------------------
+Delay:               7.941ns (Levels of Logic = 9)
+  Source:            DivisorBala/cuenta_8 (FF)
+  Destination:       MovimientoBala/y_bala_8 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: DivisorBala/cuenta_8 to MovimientoBala/y_bala_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.720   1.216  DivisorBala/cuenta_8 (DivisorBala/cuenta_8)
+     LUT3:I0->O            1   0.551   0.000  DivisorBala/vel_cmp_eq0000_wg_lut<0> (DivisorBala/vel_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  DivisorBala/vel_cmp_eq0000_wg_cy<0> (DivisorBala/vel_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorBala/vel_cmp_eq0000_wg_cy<1> (DivisorBala/vel_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorBala/vel_cmp_eq0000_wg_cy<2> (DivisorBala/vel_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorBala/vel_cmp_eq0000_wg_cy<3> (DivisorBala/vel_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  DivisorBala/vel_cmp_eq0000_wg_cy<4> (DivisorBala/vel_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O          28   0.303   1.898  DivisorBala/vel_cmp_eq0000_wg_cy<5> (DivisorBala/vel_cmp_eq0000_wg_cy<5>)
+     LUT4_D:I2->O          9   0.551   1.192  MovimientoBala/x_bala_mux0000<0>11 (MovimientoBala/N01)
+     LUT3:I2->O            1   0.551   0.000  MovimientoBala/x_bala_mux0000<8>1 (MovimientoBala/x_bala_mux0000<8>)
+     FDCPE:D                   0.203          MovimientoBala/x_bala_8
+    ----------------------------------------
+    Total                      7.941ns (3.635ns logic, 4.306ns route)
+                                       (45.8% logic, 54.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1031 / 91
+-------------------------------------------------------------------------
+Offset:              8.339ns (Levels of Logic = 4)
+  Source:            reset (PAD)
+  Destination:       MovimientoBala/y_bala_8 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to MovimientoBala/y_bala_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   0.821   2.312  reset_IBUF (reset_IBUF)
+     LUT2:I0->O           26   0.551   2.158  resets1 (resets)
+     LUT4_D:I0->O          9   0.551   1.192  MovimientoBala/x_bala_mux0000<0>11 (MovimientoBala/N01)
+     LUT3:I2->O            1   0.551   0.000  MovimientoBala/x_bala_mux0000<8>1 (MovimientoBala/x_bala_mux0000<8>)
+     FDCPE:D                   0.203          MovimientoBala/x_bala_8
+    ----------------------------------------
+    Total                      8.339ns (2.677ns logic, 5.662ns route)
+                                       (32.1% logic, 67.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 23 / 23
+-------------------------------------------------------------------------
+Offset:              7.430ns (Levels of Logic = 1)
+  Source:            MovimientoBala/y_bala_5 (FF)
+  Destination:       Y_bala<5> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: MovimientoBala/y_bala_5 to Y_bala<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCPE:C->Q            7   0.720   1.066  MovimientoBala/y_bala_5 (MovimientoBala/y_bala_5)
+     OBUF:I->O                 5.644          Y_bala_5_OBUF (Y_bala<5>)
+    ----------------------------------------
+    Total                      7.430ns (6.364ns logic, 1.066ns route)
+                                       (85.7% logic, 14.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.52 secs
+ 
+--> 
+
+Total memory usage is 261088 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

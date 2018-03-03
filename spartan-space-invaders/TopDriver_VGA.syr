@@ -1,0 +1,502 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: TopDriver_VGA.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TopDriver_VGA.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TopDriver_VGA"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : TopDriver_VGA
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/Divisor_VGA.vhd" in Library work.
+Architecture behavioral of Entity divisor_vga is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ContH_VGA.vhd" in Library work.
+Architecture behavioral of Entity conth_vga is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ContV_VGA.vhd" in Library work.
+Architecture behavioral of Entity contv_vga is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/CompH_VGA.vhd" in Library work.
+Architecture behavioral of Entity comph_vga is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/CompV_VGA.vhd" in Library work.
+Architecture behavioral of Entity compv_vga is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/GenColor_VGA.vhd" in Library work.
+Architecture behavioral of Entity gencolor_vga is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopDriver_VGA.vhd" in Library work.
+Entity <TopDriver_VGA> compiled.
+Entity <TopDriver_VGA> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <TopDriver_VGA> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <Divisor_VGA> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ContH_VGA> in library <work> (architecture <behavioral>) with generics.
+	width = 10
+
+Analyzing hierarchy for entity <ContV_VGA> in library <work> (architecture <behavioral>) with generics.
+	width = 10
+
+Analyzing hierarchy for entity <CompH_VGA> in library <work> (architecture <behavioral>) with generics.
+	End_Of_Line = 799
+	End_Of_Pulse = 751
+	End_Of_Screen = 639
+	Start_Of_Pulse = 655
+	width = 10
+
+Analyzing hierarchy for entity <CompV_VGA> in library <work> (architecture <behavioral>) with generics.
+	End_Of_Line = 520
+	End_Of_Pulse = 491
+	End_Of_Screen = 479
+	Start_Of_Pulse = 489
+	width = 10
+
+Analyzing hierarchy for entity <GenColor_VGA> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <TopDriver_VGA> in library <work> (Architecture <Behavioral>).
+Entity <TopDriver_VGA> analyzed. Unit <TopDriver_VGA> generated.
+
+Analyzing Entity <Divisor_VGA> in library <work> (Architecture <behavioral>).
+Entity <Divisor_VGA> analyzed. Unit <Divisor_VGA> generated.
+
+Analyzing generic Entity <ContH_VGA> in library <work> (Architecture <behavioral>).
+	width = 10
+Entity <ContH_VGA> analyzed. Unit <ContH_VGA> generated.
+
+Analyzing generic Entity <ContV_VGA> in library <work> (Architecture <behavioral>).
+	width = 10
+Entity <ContV_VGA> analyzed. Unit <ContV_VGA> generated.
+
+Analyzing generic Entity <CompH_VGA> in library <work> (Architecture <behavioral>).
+	End_Of_Line = 799
+	End_Of_Pulse = 751
+	End_Of_Screen = 639
+	Start_Of_Pulse = 655
+	width = 10
+Entity <CompH_VGA> analyzed. Unit <CompH_VGA> generated.
+
+Analyzing generic Entity <CompV_VGA> in library <work> (Architecture <behavioral>).
+	End_Of_Line = 520
+	End_Of_Pulse = 491
+	End_Of_Screen = 479
+	Start_Of_Pulse = 489
+	width = 10
+Entity <CompV_VGA> analyzed. Unit <CompV_VGA> generated.
+
+Analyzing Entity <GenColor_VGA> in library <work> (Architecture <behavioral>).
+Entity <GenColor_VGA> analyzed. Unit <GenColor_VGA> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Divisor_VGA>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/Divisor_VGA.vhd".
+    Found 1-bit register for signal <clk_pixel>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <Divisor_VGA> synthesized.
+
+
+Synthesizing Unit <ContH_VGA>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ContH_VGA.vhd".
+    Found 10-bit register for signal <cont>.
+    Found 10-bit adder for signal <p_cont$add0000> created at line 40.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <ContH_VGA> synthesized.
+
+
+Synthesizing Unit <ContV_VGA>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ContV_VGA.vhd".
+    Found 10-bit register for signal <cont>.
+    Found 10-bit adder for signal <p_cont$add0000> created at line 40.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <ContV_VGA> synthesized.
+
+
+Synthesizing Unit <CompH_VGA>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/CompH_VGA.vhd".
+    Found 1-bit register for signal <O1ac>.
+    Found 1-bit register for signal <O2ac>.
+    Found 1-bit register for signal <O3ac>.
+    Found 11-bit comparator greater for signal <p_O1$cmp_gt0000> created at line 42.
+    Found 11-bit comparator greater for signal <p_O2$cmp_lt0000> created at line 48.
+    Found 11-bit comparator less for signal <p_O2$cmp_lt0001> created at line 48.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+Unit <CompH_VGA> synthesized.
+
+
+Synthesizing Unit <CompV_VGA>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/CompV_VGA.vhd".
+    Found 1-bit register for signal <O1ac>.
+    Found 1-bit register for signal <O2ac>.
+    Found 1-bit register for signal <O3ac>.
+    Found 11-bit comparator greater for signal <p_O1$cmp_gt0000> created at line 42.
+    Found 11-bit comparator greater for signal <p_O2$cmp_lt0000> created at line 48.
+    Found 11-bit comparator less for signal <p_O2$cmp_lt0001> created at line 48.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+Unit <CompV_VGA> synthesized.
+
+
+Synthesizing Unit <GenColor_VGA>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/GenColor_VGA.vhd".
+Unit <GenColor_VGA> synthesized.
+
+
+Synthesizing Unit <TopDriver_VGA>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopDriver_VGA.vhd".
+Unit <TopDriver_VGA> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 10-bit adder                                          : 2
+# Registers                                            : 27
+ 1-bit register                                        : 27
+# Comparators                                          : 6
+ 11-bit comparator greater                             : 4
+ 11-bit comparator less                                : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 10-bit adder                                          : 2
+# Registers                                            : 27
+ Flip-Flops                                            : 27
+# Comparators                                          : 6
+ 11-bit comparator greater                             : 4
+ 11-bit comparator less                                : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <TopDriver_VGA> ...
+
+Optimizing unit <ContH_VGA> ...
+
+Optimizing unit <ContV_VGA> ...
+
+Optimizing unit <CompH_VGA> ...
+
+Optimizing unit <CompV_VGA> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TopDriver_VGA, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 27
+ Flip-Flops                                            : 27
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TopDriver_VGA.ngr
+Top Level Output File Name         : TopDriver_VGA
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 30
+
+Cell Usage :
+# BELS                             : 70
+#      INV                         : 1
+#      LUT2                        : 8
+#      LUT3                        : 11
+#      LUT3_D                      : 2
+#      LUT3_L                      : 3
+#      LUT4                        : 36
+#      LUT4_D                      : 4
+#      LUT4_L                      : 5
+# FlipFlops/Latches                : 27
+#      FDC                         : 5
+#      FDCE                        : 20
+#      FDP                         : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 29
+#      IBUF                        : 4
+#      OBUF                        : 25
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                       37  out of   1920     1%  
+ Number of Slice Flip Flops:             27  out of   3840     0%  
+ Number of 4 input LUTs:                 70  out of   3840     1%  
+ Number of IOs:                          30
+ Number of bonded IOBs:                  30  out of    173    17%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 27    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 27    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 5.845ns (Maximum Frequency: 171.086MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 8.962ns
+   Maximum combinational path delay: 8.686ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.845ns (frequency: 171.086MHz)
+  Total number of paths / destination ports: 281 / 47
+-------------------------------------------------------------------------
+Delay:               5.845ns (Levels of Logic = 3)
+  Source:            ContHVGA/cont_0 (FF)
+  Destination:       ContHVGA/cont_9 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: ContHVGA/cont_0 to ContHVGA/cont_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             9   0.720   1.463  ContHVGA/cont_0 (ContHVGA/cont_0)
+     LUT4:I0->O            2   0.551   0.903  ContHVGA/cont_9_mux00003_SW1 (N48)
+     LUT4_D:I3->O          2   0.551   0.903  ContHVGA/cont_9_mux00003 (ContHVGA/N7)
+     LUT4:I3->O            1   0.551   0.000  ContHVGA/cont_9_mux0000 (ContHVGA/cont_9_mux0000)
+     FDCE:D                    0.203          ContHVGA/cont_9
+    ----------------------------------------
+    Total                      5.845ns (2.576ns logic, 3.269ns route)
+                                       (44.1% logic, 55.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 28 / 25
+-------------------------------------------------------------------------
+Offset:              8.962ns (Levels of Logic = 2)
+  Source:            CompVVGA/O1ac (FF)
+  Destination:       B (PAD)
+  Source Clock:      clk rising
+
+  Data Path: CompVVGA/O1ac to B
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.720   1.246  CompVVGA/O1ac (CompVVGA/O1ac)
+     LUT3:I0->O            1   0.551   0.801  GenColorVGA/R1 (R_OBUF)
+     OBUF:I->O                 5.644          R_OBUF (R)
+    ----------------------------------------
+    Total                      8.962ns (6.915ns logic, 2.047ns route)
+                                       (77.2% logic, 22.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               8.686ns (Levels of Logic = 3)
+  Source:            RGB_in<0> (PAD)
+  Destination:       B (PAD)
+
+  Data Path: RGB_in<0> to B
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.821   0.869  RGB_in_0_IBUF (RGB_in_0_IBUF)
+     LUT3:I2->O            1   0.551   0.801  GenColorVGA/B1 (B_OBUF)
+     OBUF:I->O                 5.644          B_OBUF (B)
+    ----------------------------------------
+    Total                      8.686ns (7.016ns logic, 1.670ns route)
+                                       (80.8% logic, 19.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.13 secs
+ 
+--> 
+
+Total memory usage is 257312 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

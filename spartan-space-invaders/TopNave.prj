@@ -1,0 +1,5 @@
+vhdl work "ipcore_dir/Nave.vhd"
+vhdl work "MovNave.vhd"
+vhdl work "DivNave.vhd"
+vhdl work "DIBGenerico.vhd"
+vhdl work "TopNave.vhd"

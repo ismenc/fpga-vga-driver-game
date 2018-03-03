@@ -1,0 +1,7 @@
+vhdl work "GenColor_VGA.vhd"
+vhdl work "Divisor_VGA.vhd"
+vhdl work "ContV_VGA.vhd"
+vhdl work "ContH_VGA.vhd"
+vhdl work "CompV_VGA.vhd"
+vhdl work "CompH_VGA.vhd"
+vhdl work "TopDriver_VGA.vhd"

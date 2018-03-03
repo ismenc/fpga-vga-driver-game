@@ -1,0 +1,919 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: TOP_GENERAL.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TOP_GENERAL.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TOP_GENERAL"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : TOP_GENERAL
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DivAlien.vhd" in Library work.
+Architecture behavioral of Entity divalien is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MovAlien.vhd" in Library work.
+Architecture behavioral of Entity movalien is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DIBGenerico.vhd" in Library work.
+Architecture behavioral of Entity dibgenerico is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ipcore_dir/Alien.vhd" in Library work.
+Architecture alien_a of Entity alien is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DivBalaAlien.vhd" in Library work.
+Entity <divbalaalien> compiled.
+Entity <divbalaalien> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MovBalaAlien.vhd" in Library work.
+Architecture behavioral of Entity movbalaalien is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ipcore_dir/BalaAlien.vhd" in Library work.
+Architecture balaalien_a of Entity balaalien is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DivBala.vhd" in Library work.
+Architecture behavioral of Entity divbala is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MovBala.vhd" in Library work.
+Architecture behavioral of Entity movbala is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ipcore_dir/Bala.vhd" in Library work.
+Architecture bala_a of Entity bala is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DivNave.vhd" in Library work.
+Architecture behavioral of Entity divnave is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MovNave.vhd" in Library work.
+Architecture behavioral of Entity movnave is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ipcore_dir/Nave.vhd" in Library work.
+Architecture nave_a of Entity nave is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/Divisor_VGA.vhd" in Library work.
+Architecture behavioral of Entity divisor_vga is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ContH_VGA.vhd" in Library work.
+Architecture behavioral of Entity conth_vga is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ContV_VGA.vhd" in Library work.
+Architecture behavioral of Entity contv_vga is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/CompH_VGA.vhd" in Library work.
+Architecture behavioral of Entity comph_vga is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/CompV_VGA.vhd" in Library work.
+Architecture behavioral of Entity compv_vga is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/GenColor_VGA.vhd" in Library work.
+Architecture behavioral of Entity gencolor_vga is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopDriver_VGA.vhd" in Library work.
+Architecture behavioral of Entity topdriver_vga is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopNave.vhd" in Library work.
+Architecture behavioral of Entity topnave is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopBala.vhd" in Library work.
+Architecture behavioral of Entity topbala is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopBalaAlien.vhd" in Library work.
+Architecture behavioral of Entity topbalaalien is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopAlien.vhd" in Library work.
+Architecture behavioral of Entity topalien is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MuereAlien.vhd" in Library work.
+Architecture behavioral of Entity muerealien is up to date.
+Compiling vhdl file "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TOP_GENERAL.vhd" in Library work.
+Architecture behavioral of Entity top_general is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <TOP_GENERAL> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <TopDriver_VGA> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <TopNave> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <TopBala> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <TopBalaAlien> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <TopAlien> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <MuereAlien> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Divisor_VGA> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ContH_VGA> in library <work> (architecture <behavioral>) with generics.
+	width = 10
+
+Analyzing hierarchy for entity <ContV_VGA> in library <work> (architecture <behavioral>) with generics.
+	width = 10
+
+Analyzing hierarchy for entity <CompH_VGA> in library <work> (architecture <behavioral>) with generics.
+	End_Of_Line = 799
+	End_Of_Pulse = 751
+	End_Of_Screen = 639
+	Start_Of_Pulse = 655
+	width = 10
+
+Analyzing hierarchy for entity <CompV_VGA> in library <work> (architecture <behavioral>) with generics.
+	End_Of_Line = 520
+	End_Of_Pulse = 491
+	End_Of_Screen = 479
+	Start_Of_Pulse = 489
+	width = 10
+
+Analyzing hierarchy for entity <GenColor_VGA> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <DivNave> in library <work> (architecture <behavioral>) with generics.
+	limite = "000000111111111111111111"
+
+Analyzing hierarchy for entity <MovNave> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <DIBGenerico> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <DivBala> in library <work> (architecture <behavioral>) with generics.
+	limite = "111111111111111111"
+
+Analyzing hierarchy for entity <MovBala> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <DivBalaAlien> in library <work> (architecture <behavioral>) with generics.
+	limite = "111111111111111111"
+
+Analyzing hierarchy for entity <MovBalaAlien> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <DivAlien> in library <work> (architecture <behavioral>) with generics.
+	limite = "000011111111111111111111"
+
+Analyzing hierarchy for entity <MovAlien> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <TOP_GENERAL> in library <work> (Architecture <behavioral>).
+Entity <TOP_GENERAL> analyzed. Unit <TOP_GENERAL> generated.
+
+Analyzing Entity <TopDriver_VGA> in library <work> (Architecture <behavioral>).
+Entity <TopDriver_VGA> analyzed. Unit <TopDriver_VGA> generated.
+
+Analyzing Entity <Divisor_VGA> in library <work> (Architecture <behavioral>).
+Entity <Divisor_VGA> analyzed. Unit <Divisor_VGA> generated.
+
+Analyzing generic Entity <ContH_VGA> in library <work> (Architecture <behavioral>).
+	width = 10
+Entity <ContH_VGA> analyzed. Unit <ContH_VGA> generated.
+
+Analyzing generic Entity <ContV_VGA> in library <work> (Architecture <behavioral>).
+	width = 10
+Entity <ContV_VGA> analyzed. Unit <ContV_VGA> generated.
+
+Analyzing generic Entity <CompH_VGA> in library <work> (Architecture <behavioral>).
+	End_Of_Line = 799
+	End_Of_Pulse = 751
+	End_Of_Screen = 639
+	Start_Of_Pulse = 655
+	width = 10
+Entity <CompH_VGA> analyzed. Unit <CompH_VGA> generated.
+
+Analyzing generic Entity <CompV_VGA> in library <work> (Architecture <behavioral>).
+	End_Of_Line = 520
+	End_Of_Pulse = 491
+	End_Of_Screen = 479
+	Start_Of_Pulse = 489
+	width = 10
+Entity <CompV_VGA> analyzed. Unit <CompV_VGA> generated.
+
+Analyzing Entity <GenColor_VGA> in library <work> (Architecture <behavioral>).
+Entity <GenColor_VGA> analyzed. Unit <GenColor_VGA> generated.
+
+Analyzing Entity <TopNave> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopNave.vhd" line 86: Instantiating black box module <Nave>.
+Entity <TopNave> analyzed. Unit <TopNave> generated.
+
+Analyzing generic Entity <DivNave> in library <work> (Architecture <behavioral>).
+	limite = "000000111111111111111111"
+Entity <DivNave> analyzed. Unit <DivNave> generated.
+
+Analyzing Entity <MovNave> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <ejey_nave> in unit <MovNave> has a constant value of 110100000 during circuit operation. The register is replaced by logic.
+Entity <MovNave> analyzed. Unit <MovNave> generated.
+
+Analyzing Entity <DIBGenerico> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <xrel<9>> in unit <DIBGenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <xrel<8>> in unit <DIBGenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <xrel<7>> in unit <DIBGenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <xrel<6>> in unit <DIBGenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <xrel<5>> in unit <DIBGenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <yrel<9>> in unit <DIBGenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <yrel<8>> in unit <DIBGenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <yrel<7>> in unit <DIBGenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <yrel<6>> in unit <DIBGenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <yrel<5>> in unit <DIBGenerico> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <DIBGenerico> analyzed. Unit <DIBGenerico> generated.
+
+Analyzing Entity <TopBala> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopBala.vhd" line 88: Instantiating black box module <Bala>.
+Entity <TopBala> analyzed. Unit <TopBala> generated.
+
+Analyzing generic Entity <DivBala> in library <work> (Architecture <behavioral>).
+	limite = "111111111111111111"
+Entity <DivBala> analyzed. Unit <DivBala> generated.
+
+Analyzing Entity <MovBala> in library <work> (Architecture <behavioral>).
+Entity <MovBala> analyzed. Unit <MovBala> generated.
+
+Analyzing Entity <TopBalaAlien> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopBalaAlien.vhd" line 85: Instantiating black box module <BalaAlien>.
+Entity <TopBalaAlien> analyzed. Unit <TopBalaAlien> generated.
+
+Analyzing generic Entity <DivBalaAlien> in library <work> (Architecture <behavioral>).
+	limite = "111111111111111111"
+Entity <DivBalaAlien> analyzed. Unit <DivBalaAlien> generated.
+
+Analyzing Entity <MovBalaAlien> in library <work> (Architecture <behavioral>).
+Entity <MovBalaAlien> analyzed. Unit <MovBalaAlien> generated.
+
+Analyzing Entity <TopAlien> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopAlien.vhd" line 79: Instantiating black box module <Alien>.
+Entity <TopAlien> analyzed. Unit <TopAlien> generated.
+
+Analyzing generic Entity <DivAlien> in library <work> (Architecture <behavioral>).
+	limite = "000011111111111111111111"
+Entity <DivAlien> analyzed. Unit <DivAlien> generated.
+
+Analyzing Entity <MovAlien> in library <work> (Architecture <behavioral>).
+Entity <MovAlien> analyzed. Unit <MovAlien> generated.
+
+Analyzing Entity <MuereAlien> in library <work> (Architecture <behavioral>).
+Entity <MuereAlien> analyzed. Unit <MuereAlien> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <MuereAlien>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MuereAlien.vhd".
+    Register <rst> equivalent to <cl> has been removed
+    Found 1-bit register for signal <cl>.
+    Found 1-bit register for signal <muerto>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <MuereAlien> synthesized.
+
+
+Synthesizing Unit <Divisor_VGA>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/Divisor_VGA.vhd".
+    Found 1-bit register for signal <clk_pixel>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <Divisor_VGA> synthesized.
+
+
+Synthesizing Unit <ContH_VGA>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ContH_VGA.vhd".
+    Found 10-bit register for signal <cont>.
+    Found 10-bit adder for signal <p_cont$add0000> created at line 40.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <ContH_VGA> synthesized.
+
+
+Synthesizing Unit <ContV_VGA>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/ContV_VGA.vhd".
+    Found 10-bit register for signal <cont>.
+    Found 10-bit adder for signal <p_cont$add0000> created at line 40.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <ContV_VGA> synthesized.
+
+
+Synthesizing Unit <CompH_VGA>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/CompH_VGA.vhd".
+    Found 1-bit register for signal <O1ac>.
+    Found 1-bit register for signal <O2ac>.
+    Found 1-bit register for signal <O3ac>.
+    Found 11-bit comparator greater for signal <p_O1$cmp_gt0000> created at line 42.
+    Found 11-bit comparator greater for signal <p_O2$cmp_lt0000> created at line 48.
+    Found 11-bit comparator less for signal <p_O2$cmp_lt0001> created at line 48.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+Unit <CompH_VGA> synthesized.
+
+
+Synthesizing Unit <CompV_VGA>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/CompV_VGA.vhd".
+    Found 1-bit register for signal <O1ac>.
+    Found 1-bit register for signal <O2ac>.
+    Found 1-bit register for signal <O3ac>.
+    Found 11-bit comparator greater for signal <p_O1$cmp_gt0000> created at line 42.
+    Found 11-bit comparator greater for signal <p_O2$cmp_lt0000> created at line 48.
+    Found 11-bit comparator less for signal <p_O2$cmp_lt0001> created at line 48.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+Unit <CompV_VGA> synthesized.
+
+
+Synthesizing Unit <GenColor_VGA>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/GenColor_VGA.vhd".
+Unit <GenColor_VGA> synthesized.
+
+
+Synthesizing Unit <DivNave>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DivNave.vhd".
+    Found 24-bit register for signal <cuenta>.
+    Found 24-bit adder for signal <p_cuenta$addsub0000> created at line 33.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <DivNave> synthesized.
+
+
+Synthesizing Unit <MovNave>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MovNave.vhd".
+    Found 10-bit updown counter for signal <ejex_nave>.
+    Found 10-bit comparator greatequal for signal <ejex_nave$cmp_ge0000> created at line 30.
+    Found 10-bit comparator greater for signal <ejex_nave$cmp_gt0000> created at line 32.
+    Found 10-bit comparator less for signal <ejex_nave$cmp_lt0000> created at line 30.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   3 Comparator(s).
+Unit <MovNave> synthesized.
+
+
+Synthesizing Unit <DIBGenerico>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DIBGenerico.vhd".
+WARNING:Xst:646 - Signal <yrel<9:5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <xrel<9:5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 10-bit adder for signal <DIR_5$add0000> created at line 24.
+    Found 10-bit adder for signal <DIR_5$add0001> created at line 24.
+    Found 10-bit comparator greatequal for signal <DIR_5$cmp_ge0000> created at line 24.
+    Found 10-bit comparator greatequal for signal <DIR_5$cmp_ge0001> created at line 24.
+    Found 10-bit comparator less for signal <DIR_5$cmp_lt0000> created at line 24.
+    Found 10-bit comparator less for signal <DIR_5$cmp_lt0001> created at line 24.
+    Found 10-bit subtractor for signal <xrel>.
+    Found 10-bit subtractor for signal <yrel>.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <DIBGenerico> synthesized.
+
+
+Synthesizing Unit <DivBala>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DivBala.vhd".
+    Found 18-bit register for signal <cuenta>.
+    Found 18-bit adder for signal <p_cuenta$addsub0000> created at line 33.
+    Summary:
+	inferred  18 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <DivBala> synthesized.
+
+
+Synthesizing Unit <MovBala>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MovBala.vhd".
+    Found 10-bit register for signal <y_bala>.
+    Found 10-bit register for signal <x_bala>.
+    Found 1-bit register for signal <q>.
+    Found 10-bit register for signal <xdib>.
+    Found 10-bit comparator greatequal for signal <y_bala$cmp_ge0000> created at line 40.
+    Found 10-bit comparator less for signal <y_bala$cmp_lt0000> created at line 44.
+    Found 10-bit register for signal <ydib>.
+    Found 10-bit subtractor for signal <ydib$addsub0000> created at line 41.
+    Summary:
+	inferred  21 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <MovBala> synthesized.
+
+
+Synthesizing Unit <DivBalaAlien>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DivBalaAlien.vhd".
+    Found 18-bit register for signal <cuenta>.
+    Found 18-bit adder for signal <p_cuenta$addsub0000> created at line 33.
+    Summary:
+	inferred  18 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <DivBalaAlien> synthesized.
+
+
+Synthesizing Unit <MovBalaAlien>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MovBalaAlien.vhd".
+    Found 10-bit register for signal <x_bala_alien>.
+    Found 10-bit register for signal <y_bala_alien>.
+    Found 1-bit register for signal <act>.
+    Found 1-bit register for signal <q>.
+    Found 10-bit comparator greatequal for signal <y_bala_alien$cmp_ge0000> created at line 39.
+    Found 10-bit comparator less for signal <y_bala_alien$cmp_lt0000> created at line 41.
+    Found 10-bit register for signal <ydib>.
+    Found 10-bit adder for signal <ydib$addsub0000> created at line 40.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <MovBalaAlien> synthesized.
+
+
+Synthesizing Unit <DivAlien>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/DivAlien.vhd".
+    Found 24-bit register for signal <cuenta>.
+    Found 24-bit adder for signal <p_cuenta$addsub0000> created at line 34.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <DivAlien> synthesized.
+
+
+Synthesizing Unit <MovAlien>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/MovAlien.vhd".
+    Found 1-bit register for signal <q>.
+    Found 10-bit register for signal <xdib>.
+    Found 10-bit comparator greatequal for signal <xdib$cmp_ge0000> created at line 31.
+    Found 10-bit comparator lessequal for signal <xdib$cmp_le0000> created at line 34.
+    Found 10-bit addsub for signal <xdib$mux0003>.
+    Found 9-bit up accumulator for signal <ydib>.
+    Found 10-bit comparator greater for signal <ydib$cmp_gt0000> created at line 34.
+    Found 10-bit comparator less for signal <ydib$cmp_lt0000> created at line 31.
+    Summary:
+	inferred   1 Accumulator(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <MovAlien> synthesized.
+
+
+Synthesizing Unit <TopDriver_VGA>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopDriver_VGA.vhd".
+Unit <TopDriver_VGA> synthesized.
+
+
+Synthesizing Unit <TopNave>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopNave.vhd".
+Unit <TopNave> synthesized.
+
+
+Synthesizing Unit <TopBala>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopBala.vhd".
+Unit <TopBala> synthesized.
+
+
+Synthesizing Unit <TopBalaAlien>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopBalaAlien.vhd".
+Unit <TopBalaAlien> synthesized.
+
+
+Synthesizing Unit <TopAlien>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TopAlien.vhd".
+Unit <TopAlien> synthesized.
+
+
+Synthesizing Unit <TOP_GENERAL>.
+    Related source file is "C:/Users/Antonio/Documents/Universidad/Tercero/PrimerCuatrimestre/Sistemas Electronicos/PROYECTO FPGA/SpaceInvaders/PROYECTO_160215/TOP_GENERAL.vhd".
+WARNING:Xst:646 - Signal <y_balas> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <y_BA> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <x_balas> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <x_BA> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <rstBA> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <clBA> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <TOP_GENERAL> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 25
+ 10-bit adder                                          : 11
+ 10-bit addsub                                         : 1
+ 10-bit subtractor                                     : 9
+ 18-bit adder                                          : 2
+ 24-bit adder                                          : 2
+# Counters                                             : 1
+ 10-bit updown counter                                 : 1
+# Accumulators                                         : 1
+ 9-bit up accumulator                                  : 1
+# Registers                                            : 45
+ 1-bit register                                        : 33
+ 10-bit register                                       : 8
+ 18-bit register                                       : 2
+ 24-bit register                                       : 2
+# Comparators                                          : 33
+ 10-bit comparator greatequal                          : 12
+ 10-bit comparator greater                             : 2
+ 10-bit comparator less                                : 12
+ 10-bit comparator lessequal                           : 1
+ 11-bit comparator greater                             : 4
+ 11-bit comparator less                                : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/Nave.ngc>.
+Reading core <ipcore_dir/Bala.ngc>.
+Reading core <ipcore_dir/BalaAlien.ngc>.
+Reading core <ipcore_dir/Alien.ngc>.
+Loading core <Nave> for timing and area information for instance <MemoriaNave>.
+Loading core <Bala> for timing and area information for instance <MemoriaBala>.
+Loading core <BalaAlien> for timing and area information for instance <MemoriaBalaAlien>.
+Loading core <Alien> for timing and area information for instance <MemoriaAlien>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 25
+ 10-bit adder                                          : 11
+ 10-bit addsub                                         : 1
+ 10-bit subtractor                                     : 1
+ 18-bit adder                                          : 2
+ 24-bit adder                                          : 2
+ 5-bit subtractor                                      : 8
+# Counters                                             : 1
+ 10-bit updown counter                                 : 1
+# Accumulators                                         : 1
+ 9-bit up accumulator                                  : 1
+# Registers                                            : 157
+ Flip-Flops                                            : 157
+# Comparators                                          : 33
+ 10-bit comparator greatequal                          : 12
+ 10-bit comparator greater                             : 2
+ 10-bit comparator less                                : 12
+ 10-bit comparator lessequal                           : 1
+ 11-bit comparator greater                             : 4
+ 11-bit comparator less                                : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <ydib_1> has a constant value of 0 in block <MovAlien>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ydib_2> has a constant value of 0 in block <MovAlien>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ydib_3> has a constant value of 0 in block <MovAlien>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ydib_4> has a constant value of 0 in block <MovAlien>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:1901 - Instance U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram in unit U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram of type RAMB16_S18_S18 has been replaced by RAMB16
+INFO:Xst:1901 - Instance U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram in unit U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram of type RAMB16_S18_S18 has been replaced by RAMB16
+INFO:Xst:1901 - Instance U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram in unit U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram of type RAMB16_S18_S18 has been replaced by RAMB16
+INFO:Xst:1901 - Instance U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram in unit U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram of type RAMB16_S18_S18 has been replaced by RAMB16
+
+Optimizing unit <TOP_GENERAL> ...
+
+Optimizing unit <ContH_VGA> ...
+
+Optimizing unit <ContV_VGA> ...
+
+Optimizing unit <CompH_VGA> ...
+
+Optimizing unit <CompV_VGA> ...
+
+Optimizing unit <DivNave> ...
+
+Optimizing unit <MovNave> ...
+
+Optimizing unit <DIBGenerico> ...
+
+Optimizing unit <DivBala> ...
+
+Optimizing unit <DivBalaAlien> ...
+
+Optimizing unit <DivAlien> ...
+
+Optimizing unit <MovBala> ...
+
+Optimizing unit <MovBalaAlien> ...
+
+Optimizing unit <MovAlien> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TOP_GENERAL, actual ratio is 20.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 212
+ Flip-Flops                                            : 212
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TOP_GENERAL.ngr
+Top Level Output File Name         : TOP_GENERAL
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 10
+
+Cell Usage :
+# BELS                             : 1176
+#      GND                         : 9
+#      INV                         : 40
+#      LUT1                        : 86
+#      LUT2                        : 264
+#      LUT2_L                      : 15
+#      LUT3                        : 73
+#      LUT3_D                      : 7
+#      LUT3_L                      : 21
+#      LUT4                        : 179
+#      LUT4_D                      : 8
+#      LUT4_L                      : 4
+#      MUXCY                       : 312
+#      MUXF5                       : 9
+#      VCC                         : 5
+#      XORCY                       : 144
+# FlipFlops/Latches                : 224
+#      FDC                         : 89
+#      FDCE                        : 42
+#      FDCPE                       : 40
+#      FDE                         : 31
+#      FDP                         : 3
+#      FDPE                        : 7
+#      FDRE                        : 12
+# RAMS                             : 4
+#      RAMB16                      : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 4
+#      OBUF                        : 5
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                      377  out of   1920    19%  
+ Number of Slice Flip Flops:            224  out of   3840     5%  
+ Number of 4 input LUTs:                697  out of   3840    18%  
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of    173     5%  
+ Number of BRAMs:                         4  out of     12    33%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                                                                                                                                                                                                                   | Load  |
+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+clk                                | BUFGP                                                                                                                                                                                                                                                                   | 228   |
+NAVE_GRAL/MemoriaNave/N1           | NONE(NAVE_GRAL/MemoriaNave/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram)           | 1     |
+BALA_GRAL/MemoriaBala/N1           | NONE(BALA_GRAL/MemoriaBala/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram)           | 1     |
+BALA_ALIEN_GRAL/MemoriaBalaAlien/N1| NONE(BALA_ALIEN_GRAL/MemoriaBalaAlien/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram)| 1     |
+ALIEN_GRAL/MemoriaAlien/N1         | NONE(ALIEN_GRAL/MemoriaAlien/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram)         | 1     |
+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------------------------------------------+------------------------------------------------+-------+
+Control Signal                                                                           | Buffer(FF name)                                | Load  |
+-----------------------------------------------------------------------------------------+------------------------------------------------+-------+
+BALA_ALIEN_GRAL/MovimientoBalaAlien/x_bala_alien_0__and0000(XST_GND:G)                   | NONE(BALA_ALIEN_GRAL/DivisorBalaAlien/cuenta_0)| 69    |
+reset                                                                                    | IBUF                                           | 63    |
+rst_ali(rst_ali1:O)                                                                      | NONE(ALIEN_GRAL/DivisorAlien/cuenta_0)         | 40    |
+BALA_GRAL/MovimientoBala/y_bala_0__and0000(BALA_GRAL/resets1:O)                          | NONE(BALA_GRAL/DivisorBala/cuenta_0)           | 29    |
+BALA_GRAL/MovimientoBala/x_bala_0__and0000(BALA_GRAL/MovimientoBala/x_bala_0__and00001:O)| NONE(BALA_GRAL/MovimientoBala/x_bala_0)        | 1     |
+BALA_GRAL/MovimientoBala/x_bala_0__and0001(BALA_GRAL/MovimientoBala/x_bala_0__and00011:O)| NONE(BALA_GRAL/MovimientoBala/x_bala_0)        | 1     |
+BALA_GRAL/MovimientoBala/x_bala_1__and0000(BALA_GRAL/MovimientoBala/x_bala_1__and00001:O)| NONE(BALA_GRAL/MovimientoBala/x_bala_1)        | 1     |
+BALA_GRAL/MovimientoBala/x_bala_1__and0001(BALA_GRAL/MovimientoBala/x_bala_1__and00011:O)| NONE(BALA_GRAL/MovimientoBala/x_bala_1)        | 1     |
+BALA_GRAL/MovimientoBala/x_bala_2__and0000(BALA_GRAL/MovimientoBala/x_bala_2__and00001:O)| NONE(BALA_GRAL/MovimientoBala/x_bala_2)        | 1     |
+BALA_GRAL/MovimientoBala/x_bala_2__and0001(BALA_GRAL/MovimientoBala/x_bala_2__and00011:O)| NONE(BALA_GRAL/MovimientoBala/x_bala_2)        | 1     |
+BALA_GRAL/MovimientoBala/x_bala_3__and0000(BALA_GRAL/MovimientoBala/x_bala_3__and00001:O)| NONE(BALA_GRAL/MovimientoBala/x_bala_3)        | 1     |
+BALA_GRAL/MovimientoBala/x_bala_3__and0001(BALA_GRAL/MovimientoBala/x_bala_3__and00011:O)| NONE(BALA_GRAL/MovimientoBala/x_bala_3)        | 1     |
+BALA_GRAL/MovimientoBala/x_bala_4__and0000(BALA_GRAL/MovimientoBala/x_bala_4__and00001:O)| NONE(BALA_GRAL/MovimientoBala/x_bala_4)        | 1     |
+BALA_GRAL/MovimientoBala/x_bala_4__and0001(BALA_GRAL/MovimientoBala/x_bala_4__and00011:O)| NONE(BALA_GRAL/MovimientoBala/x_bala_4)        | 1     |
+BALA_GRAL/MovimientoBala/x_bala_5__and0000(BALA_GRAL/MovimientoBala/x_bala_5__and00001:O)| NONE(BALA_GRAL/MovimientoBala/x_bala_5)        | 1     |
+BALA_GRAL/MovimientoBala/x_bala_5__and0001(BALA_GRAL/MovimientoBala/x_bala_5__and00011:O)| NONE(BALA_GRAL/MovimientoBala/x_bala_5)        | 1     |
+BALA_GRAL/MovimientoBala/x_bala_6__and0000(BALA_GRAL/MovimientoBala/x_bala_6__and00001:O)| NONE(BALA_GRAL/MovimientoBala/x_bala_6)        | 1     |
+BALA_GRAL/MovimientoBala/x_bala_6__and0001(BALA_GRAL/MovimientoBala/x_bala_6__and00011:O)| NONE(BALA_GRAL/MovimientoBala/x_bala_6)        | 1     |
+BALA_GRAL/MovimientoBala/x_bala_7__and0000(BALA_GRAL/MovimientoBala/x_bala_7__and00001:O)| NONE(BALA_GRAL/MovimientoBala/x_bala_7)        | 1     |
+BALA_GRAL/MovimientoBala/x_bala_7__and0001(BALA_GRAL/MovimientoBala/x_bala_7__and00011:O)| NONE(BALA_GRAL/MovimientoBala/x_bala_7)        | 1     |
+BALA_GRAL/MovimientoBala/x_bala_8__and0000(BALA_GRAL/MovimientoBala/x_bala_8__and00001:O)| NONE(BALA_GRAL/MovimientoBala/x_bala_8)        | 1     |
+BALA_GRAL/MovimientoBala/x_bala_8__and0001(BALA_GRAL/MovimientoBala/x_bala_8__and00011:O)| NONE(BALA_GRAL/MovimientoBala/x_bala_8)        | 1     |
+BALA_GRAL/MovimientoBala/x_bala_9__and0000(BALA_GRAL/MovimientoBala/x_bala_9__and00001:O)| NONE(BALA_GRAL/MovimientoBala/x_bala_9)        | 1     |
+BALA_GRAL/MovimientoBala/x_bala_9__and0001(BALA_GRAL/MovimientoBala/x_bala_9__and00011:O)| NONE(BALA_GRAL/MovimientoBala/x_bala_9)        | 1     |
+-----------------------------------------------------------------------------------------+------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 9.308ns (Maximum Frequency: 107.434MHz)
+   Minimum input arrival time before clock: 7.725ns
+   Maximum output required time after clock: 10.310ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 9.308ns (frequency: 107.434MHz)
+  Total number of paths / destination ports: 14475 / 372
+-------------------------------------------------------------------------
+Delay:               9.308ns (Levels of Logic = 7)
+  Source:            BALA_ALIEN_GRAL/MovimientoBalaAlien/x_bala_alien_8 (FF)
+  Destination:       BALA_ALIEN_GRAL/MemoriaBalaAlien/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram (RAM)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: BALA_ALIEN_GRAL/MovimientoBalaAlien/x_bala_alien_8 to BALA_ALIEN_GRAL/MemoriaBalaAlien/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCPE:C->Q            3   0.720   1.246  BALA_ALIEN_GRAL/MovimientoBalaAlien/x_bala_alien_8 (BALA_ALIEN_GRAL/MovimientoBalaAlien/x_bala_alien_8)
+     LUT4:I0->O            1   0.551   0.996  BALA_ALIEN_GRAL/DibujBalaAlien/DIR_5_add0000<8>1 (BALA_ALIEN_GRAL/DibujBalaAlien/DIR_5_add0000<8>)
+     LUT2:I1->O            1   0.551   0.000  BALA_ALIEN_GRAL/DibujBalaAlien/Mcompar_DIR_5_cmp_lt0000_lut<8> (BALA_ALIEN_GRAL/DibujBalaAlien/Mcompar_DIR_5_cmp_lt0000_lut<8>)
+     MUXCY:S->O            1   0.500   0.000  BALA_ALIEN_GRAL/DibujBalaAlien/Mcompar_DIR_5_cmp_lt0000_cy<8> (BALA_ALIEN_GRAL/DibujBalaAlien/Mcompar_DIR_5_cmp_lt0000_cy<8>)
+     MUXCY:CI->O           1   0.303   0.869  BALA_ALIEN_GRAL/DibujBalaAlien/Mcompar_DIR_5_cmp_lt0000_cy<9> (BALA_ALIEN_GRAL/DibujBalaAlien/Mcompar_DIR_5_cmp_lt0000_cy<9>)
+     LUT4_D:I2->O          9   0.551   1.319  BALA_ALIEN_GRAL/DibujBalaAlien/DIR_0_mux000011 (BALA_ALIEN_GRAL/DibujBalaAlien/N01)
+     LUT2:I1->O            1   0.551   0.801  BALA_ALIEN_GRAL/DibujBalaAlien/DIR_8_mux00001 (BALA_ALIEN_GRAL/DIRS<8>)
+     begin scope: 'BALA_ALIEN_GRAL/MemoriaBalaAlien'
+     begin scope: 'U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram'
+     RAMB16:ADDRA12            0.350          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram
+    ----------------------------------------
+    Total                      9.308ns (4.077ns logic, 5.231ns route)
+                                       (43.8% logic, 56.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 147 / 82
+-------------------------------------------------------------------------
+Offset:              7.725ns (Levels of Logic = 4)
+  Source:            reset (PAD)
+  Destination:       BALA_GRAL/MovimientoBala/y_bala_8 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to BALA_GRAL/MovimientoBala/y_bala_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            99   0.821   2.576  reset_IBUF (reset_IBUF)
+     LUT3:I0->O            1   0.551   0.827  BALA_GRAL/resets1_1 (BALA_GRAL/resets1)
+     LUT4_D:I3->O         19   0.551   1.645  BALA_GRAL/MovimientoBala/x_bala_mux0000<0>11 (BALA_GRAL/MovimientoBala/N01)
+     LUT2:I1->O            1   0.551   0.000  BALA_GRAL/MovimientoBala/y_bala_mux0000<6>1 (BALA_GRAL/MovimientoBala/y_bala_mux0000<6>)
+     FDCPE:D                   0.203          BALA_GRAL/MovimientoBala/y_bala_6
+    ----------------------------------------
+    Total                      7.725ns (2.677ns logic, 5.048ns route)
+                                       (34.7% logic, 65.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 20 / 5
+-------------------------------------------------------------------------
+Offset:              10.310ns (Levels of Logic = 4)
+  Source:            ALIEN_GRAL/MemoriaAlien/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/douta_n_0 (FF)
+  Destination:       B (PAD)
+  Source Clock:      clk rising
+
+  Data Path: ALIEN_GRAL/MemoriaAlien/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/douta_n_0 to B
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.720   1.216  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/douta_n_0 (douta<0>)
+     end scope: 'ALIEN_GRAL/MemoriaAlien'
+     LUT3:I0->O            1   0.551   0.827  DRIVER_VGA_GRAL/GenColorVGA/B_SW0 (N9)
+     LUT4:I3->O            1   0.551   0.801  DRIVER_VGA_GRAL/GenColorVGA/B (B_OBUF)
+     OBUF:I->O                 5.644          B_OBUF (B)
+    ----------------------------------------
+    Total                     10.310ns (7.466ns logic, 2.844ns route)
+                                       (72.4% logic, 27.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 13.11 secs
+ 
+--> 
+
+Total memory usage is 278048 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   16 (   0 filtered)
+Number of infos    :   17 (   0 filtered)
+
