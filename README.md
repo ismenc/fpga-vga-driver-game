@@ -16,6 +16,13 @@ Here's some basic documentation for the case you need to use some parts of this 
 ### Blocks
 - - - -
 
+#### VGA driver components
+
+* `TopDriver_VGA`: top block for driver that integrates and connects other components.
+* `CompH`, `compV`, `contH`, `contV`: comparator and counter components.
+* `Div_VGA`: frecuency divisor.
+* `GenColor_VGA`: block that generates the colourish output.
+
 #### DIBgenerico
 
 This block receives a draw position (dib stands for spanish 'dibujo' wich means draw) and that is where the current position that the driver is painting. The output is the relative position for the sprite (position from the start of the sprite to the current position the driver is painting if it's on the sprite range).
